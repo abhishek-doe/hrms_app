@@ -1,0 +1,71 @@
+*{
+    overflow-x: hidden;
+}
+.footer{
+    padding: 5rem;
+    background: #2670c5;
+    border-radius: 10px;
+    /* gap: 8rem; */
+    display: grid;
+    grid-template-columns: repeat(5, 1fr);
+    margin: auto;
+    justify-items: center;
+    width: 85%;
+    margin-bottom: 4rem;
+    margin-top: 5rem;
+}
+.footer .logoDiv{
+    background: #2670c5;
+}
+.footer .description{
+    color: white;
+    padding-bottom: 13px;
+    opacity: 7;
+}
+.footer section{
+    display: grid;
+    margin: 2rem 0;
+}
+.footer span{
+    font-size: 1.2rem;
+    font-weight: bold;
+    padding-bottom: 1.5rem;
+    color: white;
+}
+.footer .section .div{
+    display: grid;
+    gap: 1rem;
+    background: #2670c5;
+
+}
+.footer .section li{
+    color: white;
+    opacity: .7;
+}
+.footer .section li:hover{
+    opacity: 1;
+}
+.footer .icon{
+    height: 2.2rem;
+    width: 2.2rem;
+    background: white;
+    border-radius: 100%;
+    color: #2670c5;
+    margin-right: 1rem;
+}
+.footer .icon-div{
+    display: flex;
+    background: #2670c5;
+}
+.footer .email-div{
+    background: #2670c5;
+}
+.footer .email-div .email{
+    color: white;
+    margin-bottom: 4rem;
+}
+@media screen and (max-width: 1000px) {
+    .footer{
+    grid-template-columns: repeat(3, 1fr);
+    }
+}

@@ -1,0 +1,22 @@
+.navbar{
+    display: flex;
+    flex-direction: row;
+    background: rgb(0, 110, 255);
+    color: white;
+    padding: 1rem;
+    justify-content: space-between;
+}
+.navbar-ul{
+    display: flex;
+    list-style-type: none;
+    justify-content: center;
+    align-items: center;
+    text-align: right;
+
+}
+.navbar-ul li{
+    justify-self: flex-end;
+    margin: 0 1rem;
+    float: right;
+    color: white;
+}
