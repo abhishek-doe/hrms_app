@@ -5,6 +5,7 @@ import Holiday from "./components/HolidayForm"
 import HolidayUI from './components/HolidayUI';
 import Navbar from "./components/Navbar"
 import Footer from "./components/Footer"
+import Dashboard from './components/Dashboard';
 
 function App() {
   return (
@@ -14,6 +15,7 @@ function App() {
         <Route path="/" element={<EmployeeForm />}/>
         <Route path='/holiday' element={<Holiday />} />
         <Route path='/holidayui' element={<HolidayUI />} />
+        <Route path='/dashboard' element={<Dashboard />} />
       </Routes>
       <Footer />
     </main>
