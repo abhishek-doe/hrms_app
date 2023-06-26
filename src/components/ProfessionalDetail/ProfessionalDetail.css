@@ -1,0 +1,120 @@
+.professionalDetail .info-ele::-webkit-scrollbar {
+  width: 10px;
+}
+.professionalDetail .info-ele::-webkit-scrollbar-thumb {
+  background: #adadad;
+}
+.professionalDetail {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-top: 1rem;
+}
+.container {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+}
+
+.professionalDetail .col-1 .skill-info {
+  width: 30rem;
+  margin: 1rem;
+}
+.professionalDetail .edit-info {
+  width: 5rem;
+  padding: 2px 0;
+  background-color: white;
+  border-radius: 10px;
+  color: #5095c0;
+  border: 2px solid #5095c0;
+}
+
+.professionalDetail .col-1 .pInfo-tag {
+  display: flex;
+  padding: 10px 1.2rem;
+  border: 1px solid #d4d4d4;
+  border-radius: 5px;
+  width: 32.9rem;
+}
+.professionalDetail .info-ele {
+  width: 35.3rem;
+  border: 1px solid #dadada;
+  box-shadow: rgb(0 0 0/15%) 0px 4px 10px;
+  height: 23.5rem;
+  max-height: 25rem;
+  overflow-y: scroll;
+}
+
+.professionalDetail .col-1 .language-info {
+  margin: 1rem;
+}
+
+.professionalDetail .col-2 .education-info .pInfo-tag {
+  display: flex;
+  padding: 10px 1.2rem;
+  border: 1px solid #d4d4d4;
+  border-radius: 5px;
+  width: 33rem;
+  margin-top: 1rem;
+}
+.professionalDetail .col-2 .prevEmploy-info .pInfo-tag {
+  display: flex;
+  padding: 10px 1.2rem;
+  border: 1px solid #d4d4d4;
+  border-radius: 5px;
+  width: 33rem;
+  margin-top: 1rem;
+}
+.professionalDetail .col-2 .education-head{
+    display: flex;
+    padding: 10px 1.9rem;
+    gap: 1rem;
+    align-items: center;
+    cursor: pointer;
+}
+.professionalDetail .col-2 .education-content{
+    background: #eeeeee;
+    height: 0;
+    overflow: hidden;
+    max-height: 0;
+}
+.professionalDetail .col-2 .education-content-show{
+    height: auto;
+    max-height: 9999px;
+    background: #eeeeee;
+}
+.info-ele{
+    height: 0px;
+}
+@media screen and (max-width: 1024px){
+    .professionalDetail .col-1{ 
+        margin-left: 1rem;
+    }
+    .professionalDetail .info-ele {
+        width: 30rem;
+      }
+      .professionalDetail .col-1 .pInfo-tag {
+        width: 27.6rem;
+      }
+      .professionalDetail .col-2 .education-info .pInfo-tag {
+        width: 27.5rem;
+      }
+      .professionalDetail .col-2 .prevEmploy-info .pInfo-tag {
+        width: 27.5rem;
+      }
+}
+@media screen and (max-width: 768px){
+    .container {
+        display: grid;
+        grid-template-columns: repeat(1, 1fr);
+      }
+      .professionalDetail .col-1{
+        margin-left: 0;
+      }
+      
+      .professionalDetail .col-1 .language-info {
+        margin: 0rem;
+      }
+      .professionalDetail .col-1 .skill-info {
+        margin: 1rem 0;
+      }
+}

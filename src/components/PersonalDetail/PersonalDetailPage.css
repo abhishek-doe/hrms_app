@@ -1,0 +1,199 @@
+.personalDetail .info-ele::-webkit-scrollbar {
+  width: 10px;
+}
+.personalDetail .info-ele::-webkit-scrollbar-thumb {
+  background: #adadad; 
+}
+.personalDetail .address-info::-webkit-scrollbar {
+  width: 10px;
+}
+.personalDetail .address-info::-webkit-scrollbar-thumb {
+  background: #adadad; 
+}
+.personalDetail .col-3 .dependent-div::-webkit-scrollbar {
+  width: 10px;
+}
+.personalDetail .col-3 .dependent-div::-webkit-scrollbar-thumb {
+  background: #adadad; 
+}
+.personalDetail{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.personalDetail .container{
+  display: grid;
+  grid-template-columns: repeat(3, 0fr);
+  margin: 1rem;
+}
+
+.personalDetail .col-1 .profile{
+  height: 18rem;
+  width: 15rem;
+  padding: 1rem;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 1rem;
+  flex-direction: column;
+  box-shadow: rgb(0 0 0/ 15%) 0px 4px 10px;
+  border: 1px solid #d4d4d4;
+  border-radius: 10px;
+}
+.personalDetail .col-2{
+  margin: 0 3rem;
+}
+.personalDetail .emergency{
+  height: 10rem;
+  width: 15rem;
+  border-radius: 10px;
+  padding: 1rem;
+  box-shadow: rgb(0 0 0/ 15%) 0px 4px 10px;
+  border: 1px solid #d4d4d4;
+  margin-top: 1rem;
+}
+.personalDetail .col-1 .edit-emer{
+  width: 5rem;
+  padding: 2px 0;
+  background-color: white;
+  border-radius: 10px ;
+  color: #5095c0;
+  border: 2px solid #5095c0;
+}
+.personalDetail .edit-info{
+  width: 5rem;
+  padding: 2px 0;
+  background-color: white;
+  border-radius: 10px ;
+  color: #5095c0;
+  border: 2px solid #5095c0;
+}
+
+.personalDetail .info-ele{
+  max-height: 16.8rem;
+  border-radius: 5px;
+  width: 30rem;
+  overflow-y: scroll;
+  border: 2px solid #d4d4d4;
+}
+
+.personalDetail .address-info{
+  height: 16.8rem;
+  border-radius: 5px;
+  width: 30rem;
+  border: 2px solid #d4d4d4;
+  box-shadow: rgb(0 0 0/ 15%) 0px 4px 10px;
+}
+.personalDetail .addressD{
+  margin-top: 1rem;
+}
+.personalDetail .col-3 .dependent-div{
+  max-width: 22rem;
+  width: 17rem;
+  height: 27.5rem;
+  max-height: 27.5rem;
+  padding: 1.2rem;
+  border: 2px solid #d4d4d4;
+  box-shadow: rgb(0 0 0/ 15%) 0px 4px 10px;
+  overflow-y: scroll;
+}
+.personalDetail .edit-btn{
+  color: #61dafb;
+}
+.personalDetail .pInfo-tag{
+  display: flex;
+  gap: 11rem;
+  padding: 10px 1.2rem;
+  border: 1px solid #d4d4d4;
+  border-radius: 5px; 
+  width: 27.7rem;
+}
+.personalDetail .address-tag{
+  display: flex;
+  gap: 13.9rem;
+  padding: 10px 1.2rem;
+  border: 1px solid #d4d4d4;
+  border-radius: 5px; 
+  width: 27.7rem;
+}
+.personalDetail .dependent-tag{
+  display: flex;
+  gap: 2rem;
+  padding: 10px 1.2rem;
+  border: 1px solid #d4d4d4;
+  border-radius: 5px; 
+  width: 17rem;
+}
+@media screen and (max-width: 1024px) {
+  .personalDetail .col-2{
+    margin: 0 1rem;
+  } 
+  .personalDetail .pInfo-tag{
+    max-width: 22rem;
+    gap: 5rem;
+  }
+  .personalDetail .info-ele{
+    width: 24.3rem;
+  }
+  .personalDetail .address-info{
+    width: 24.2rem;
+  }
+  .personalDetail .address-tag{
+    max-width: 22rem;
+    gap: 7rem;
+  }
+}
+@media screen and (max-width: 768px){
+  .personalDetail .container{
+    grid-template-columns: repeat(1, 0fr);
+  }
+  .personalDetail .col-2{
+    display: flex;
+    flex-direction: column;
+    margin: 2rem 0;
+    justify-content: center;
+    align-items: center;
+  }
+  .personalDetail .col-1{
+    display: flex;
+    gap: 2rem;
+  }
+  .personalDetail .emergency{
+    height: 18rem;
+    margin: 0;
+  }
+  .personalDetail .col-3{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+  }
+  .personalDetail .pInfo-tag{
+    width: 33rem;
+    max-width: 33rem;
+    gap: 17rem;
+  }
+  .personalDetail .info-ele{
+    width: 35.3rem;
+  }
+  .personalDetail .address-info{
+    width: 35.2rem;
+  }
+  .personalDetail .address-tag{
+    max-width: 33rem;
+    width: 33rem;
+    gap: 19rem;
+  }
+  .personalDetail .col-3 .dependent-div{
+    max-width: 33rem;
+    width: 33rem;
+    height: 27.5rem;
+    max-height: 27.5rem;
+    padding: 1.2rem;
+  }
+  .personalDetail .dependent-tag{
+    width: 33rem;
+    max-width: 33rem;
+    gap: 17rem;
+  }
+}

@@ -80,30 +80,12 @@ useEffect(() => {
 };
 
 const HolidaysPage = () => {
-  const [holidays, setHolidays] = useState([]);
-
- 
-
+  
   return (
     <div>
       <div className="holidays-page">
         <HolidayForm />
       </div>
-      {/* <div className='holidays-list'>
-        <h2 className='holidays-heading'>Holidays</h2>
-        <ul className='holiday-list'>
-          {holidays.map((holiday) => (
-            <li key={holiday.id}>
-              <div className='serial-name'>
-                <h3>{holiday.serial}.&nbsp;</h3>
-                <h3>{holiday.name}</h3>
-              </div>
-              <p>Date: <span style={{ fontWeight: "bold" }}>{holiday.date}</span></p>
-              <p>Description: <span style={{ fontWeight: "700" }}>{holiday.description}</span></p>
-            </li>
-          ))}
-        </ul>
-      </div> */}
     </div>
   );
 };

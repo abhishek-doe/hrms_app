@@ -1,22 +1,102 @@
-.navbar{
-    display: flex;
-    flex-direction: row;
-    background: rgb(0, 110, 255);
-    color: white;
-    padding: 1rem;
-    justify-content: space-between;
+.navbar {
+  background: #fff;
+  color: black;
+  padding: 1rem 2.5rem;
+  border-bottom: 3px solid #eee;
+  z-index: 20;
+  min-width: 4rem;
 }
-.navbar-ul{
-    display: flex;
-    list-style-type: none;
-    justify-content: center;
-    align-items: center;
-    text-align: right;
+.navbar .container {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  gap: 43rem;
+}
+.navbar-ul {
+  display: flex;
+  list-style-type: none;
+  justify-content: center;
+  align-items: center;
+  text-align: right;
+}
+.navbar-ul li {
+  justify-self: flex-end;
+  margin: 0 1rem;
+  float: right;
+  color: black;
+  transition: 100ms;
+}
 
+.navbar .side-menu {
+  display: none;
 }
-.navbar-ul li{
-    justify-self: flex-end;
-    margin: 0 1rem;
-    float: right;
-    color: white;
+.navbar .side-menu_active {
+  height: 100%;
+  width: 20%;
+  position: absolute;
+  left: 0;
+  border-right: 3px solid #c9c9c9;
+  z-index: 10;
+  margin-top: 1rem;
+  border-top: 1px solid #eee;
+  background-color: white;
+}
+.navbar .side-menu-list-div {
+  padding: 1rem;
+  padding-left: 0;
+}
+.navbar .side-menu-list-div .sidemenu-link {
+  color: rgb(75, 75, 75);
+  text-decoration: none;
+  font-size: 1.1rem;
+}
+.navbar .side-menu-list-div .sidemenu-link:hover {
+  color: white;
+}
+.navbar .side-menu-list-div li {
+  list-style-type: none;
+  font-size: 16px;
+  border-bottom: 3px solid #eee;
+  cursor: pointer;
+  padding: 10px 1rem;
+  border-radius: 0px 25px 25px 0;
+}
+.navbar .side-menu-list-div .sidemenu-link:hover li {
+  color: white;
+}
+.navbar .side-menu-list-div .sidemenu-link:hover li {
+  background-color: #0e82cf;
+}
+.navbar .side-menu-list-div li:hover {
+  border-bottom: 3px solid #7790a5;
+}
+.navbar .gtm-logo {
+  height: 80px;
+}
+
+@media screen and (max-width: 1024px) {
+  .navbar .container {
+    gap: 25rem;
+  }
+}
+@media screen and (max-width: 768px) {
+  .navbar .container {
+    gap: 16rem;
+  }
+  .navbar .side-menu_active {
+    width: 50%;
+  }
+}
+@media screen and (max-width: 425px) {
+  .navbar .container {
+    gap: 1rem;
+    font-size: 13px;
+    min-width: 30rem;
+    width: 30rem !important;
+  }
+
+  .navbar .gtm-logo {
+    height: 30px;
+    margin-left: 3rem;
+  }
 }

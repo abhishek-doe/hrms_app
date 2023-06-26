@@ -1,0 +1,205 @@
+.dashboard-2{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.dashboard-2 .container{
+    margin: 1rem;
+    display: grid;
+    grid-template-columns: repeat(3, 0fr);
+}
+.dashboard-2 .col-2{
+    margin: 0 2rem;
+}
+.dashboard-2 .pop-ups{
+    height: 7rem;
+    padding: 2rem;
+    color: white;
+    width: 20rem;
+    background: #a0d468;
+    display: flex;
+    gap: 1rem;
+    justify-content: center;
+    align-items: center;
+}
+.dashboard-2 .pop-ups p:hover{
+    background: #8bc24a;
+}
+.dashboard-2 .pop-ups p{
+    height: 4rem;
+    width: 5rem;
+    min-width: 3rem;
+    border: 3px solid white;
+    border-radius: 3px;
+    padding: 10px;
+}
+.dashboard-2 .col-1 .tasks-div{
+    height: 20rem;
+    width: 22rem;
+    max-height: 20rem;
+    overflow-y: scroll;
+    padding: 1rem;
+    border: 1px solid #dbdbdb;
+}
+.dashboard-2 .col-1 .tasks-div::-webkit-scrollbar {
+    width: 10px;
+  }
+.dashboard-2 .col-1 .tasks-div::-webkit-scrollbar-thumb {
+    background: #adadad; 
+  }
+.dashboard-2 .col-1 .tasks-box{
+    border: 1px solid rgb(214, 214, 214);
+    padding: 13px;
+    border-left: 6px solid #4476d7;
+    border-radius: 10px;
+    margin-bottom: 10px;
+}
+
+.dashboard-2 .tasks-li{
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    margin-bottom: 10px;
+}
+.dashboard-2 .tasks-time{
+    justify-self: end;
+}
+.dashboard-2 .team-time{
+    height: 2rem;
+    width: 22rem;
+    color: white;
+    padding: 1rem;
+    background-color: #2dc3e8;
+}
+.dashboard-2 .duty-leave{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 1rem;
+    width: 20rem;
+    padding: 1rem;
+}
+.dashboard-2 .vl{
+    height: 4rem;
+    width: 2px;
+    background-color: #d0d0d0;
+    border-radius: 5px;
+}
+.dashboard-2 .duty-leave-div{
+    box-shadow: rgb(0 0 0/ 15%) 0px 4px 20px;
+    width: 24rem;
+}
+.dashboard-2 .duty-requests{
+    height: 22rem;
+    margin-top: 1rem;
+    width: 24rem;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    box-shadow: rgb(0 0 0/ 15%) 0px 4px 20px;
+}
+.dashboard-2 .leaves-btn-div{
+    display: flex;
+    gap: 1rem;
+    margin-top: 10px;
+}
+.dashboard-2 .leave-btn, .dashboard-2 .duty-btn{
+    background-color: #427fea;
+    padding: 10px;
+    min-width: 5rem;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+}
+.dashboard-2 .leave-inp{
+    padding: 10px;
+    border: none;
+}
+.dashboard-2 .status-div{
+    display: grid;
+    grid-template-columns: auto auto;
+    margin: 10px 0;
+}
+.dashboard-2 .status-box{
+    color: white;
+    text-align: center;
+    padding: 1rem 0;
+    margin: 10px;
+    height: 4rem;
+    width: 10rem;
+    border-radius: 10px;
+}
+
+.dashboard-2 .taskBoard-div{
+    background-color: #4575e1;
+    padding: 1rem;
+    color: white;
+    display: flex;
+    justify-content: flex-end;
+    gap: 2rem;
+}
+.dashboard-2 .col-3{
+    width: 24rem;
+}
+.dashboard-2 .taskBoard-div .all-btn{
+    background-color: white;
+    color: #4575e1;
+    border-radius: 30%;
+    padding: 2px;
+}
+.dashboard-2 .taskBoard-inp{
+    width: 85%;
+    margin: 1rem 1.5rem;
+    font-size: 14px;
+    border-radius: 9px;
+    padding: 10px;
+    border: 1px solid #575757;
+}
+.dashboard-2 .taskBoardData-div{
+    max-height: 22rem;
+    padding: 1rem;
+    overflow-y: scroll;
+    border: 1px solid rgb(207, 207, 207);
+}
+.dashboard-2 .taskBoardData-div::-webkit-scrollbar {
+    width: 10px;
+  }
+.dashboard-2 .taskBoardData-div::-webkit-scrollbar-thumb {
+    background: #adadad; 
+  }
+.dashboard-2 .taskBoard-box{
+    padding: 10px;
+    margin-bottom: 1rem;
+    box-shadow: rgb(0 0 0/ 15%) 0px 4px 10px;
+    min-height: 7rem;
+}
+
+.dashboard-2 .editDelete-div{
+    display: flex;
+    gap: 1rem;
+    margin-top: 1rem;
+}
+.dashboard-2 .edit-div{
+    display: flex;
+    align-items: center;
+    gap: 6px;
+    font-size: 0.9rem;
+}
+@media screen and (max-width: 1024px){
+    .dashboard-2 .container{
+        grid-template-columns: repeat(2, 0fr);
+    }
+    .dashboard-2 .col-3{
+        margin-top: 2rem;
+    }
+}
+@media screen and (max-width: 768px){
+    .dashboard-2 .container{
+        grid-template-columns: repeat(1, 0fr);
+    }
+    .dashboard-2 .col-2{
+        margin: 0rem;
+        margin-top: 2rem;
+    }
+}

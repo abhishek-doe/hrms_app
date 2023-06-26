@@ -1,0 +1,124 @@
+.jobDetail {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.jobDetail .container {
+  padding: 1rem;
+  display: grid;
+  grid-template-columns: repeat(3, 0fr);
+}
+
+.jobDetail .col-2 {
+  margin: 0 1rem;
+}
+
+.jobDetail .job-tag {
+  display: flex;
+  gap: 1rem;
+  width: 26rem;
+  border: 1px solid rgb(185, 185, 185);
+  border-radius: 10px 10px 0 0;
+}
+.jobDetail .job-tag .notClicked {
+  height: 3rem;
+  display: flex;
+  align-items: center;
+  margin-left: 10px;
+  cursor: pointer;
+  color: #858585;
+}
+
+.jobDetail .job-tag .clicked {
+  border-top: 3px solid #119acc;
+  height: 3rem;
+  display: flex;
+  align-items: center;
+  margin-left: 10px;
+  cursor: pointer;
+}
+.jobDetail .detail-container {
+  width: 26rem;
+  height: 25.8rem;
+  border: 1px solid rgb(185, 185, 185);
+  border-radius: 0 0 10px 10px;
+}
+.jobDetail .detail-body {
+  height: 15.6rem;
+  max-height: 27rem;
+  overflow-y: scroll;
+}
+.jobDetail .detail-container .detail-head {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  gap: 5px;
+  margin: 1rem 0;
+}
+.jobDetail .position-container {
+  width: 26rem;
+  height: 26rem;
+  border: 1px solid rgb(185, 185, 185);
+  border-radius: 0 0 10px 10px;
+}
+.jobDetail .position-container .position-head {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  margin: 1rem 0;
+}
+.jobDetail .positionDrop {
+  background: #eeeeee;
+  height: 0;
+  overflow: hidden;
+  max-height: 0;
+}
+.jobDetail .positionDrop-show {
+  height: auto;
+  max-height: 9999px;
+  background: #eeeeee;
+}
+.jobDetail .position-container .position-detail {
+  height: 19rem;
+  max-height: 19rem;
+  overflow-y: scroll;
+}
+.jobDetail .ctc-body {
+  height: 20rem;
+  width: 25.9rem;
+  border: 1px solid #999999;
+}
+.jobDetail .ctc-body {
+  height: 18.6rem;
+  border-radius: 0 0 10px 10px;
+  overflow-y: scroll;
+}
+.jobDetail .bank-body {
+  height: 18.6rem;
+  width: 25.9rem;
+  border: 1px solid #999999;
+  border-radius: 0 0 10px 10px;
+  overflow-y: scroll;
+  max-height: 18.6rem;
+}
+@media screen and (max-width: 1024px) {
+  .jobDetail .container {
+    grid-template-columns: repeat(2, 0fr);
+  }
+  .jobDetail .col-1 {
+    margin-bottom: 1rem;
+  }
+}
+@media screen and (max-width: 768px) {
+  .jobDetail .container {
+    grid-template-columns: repeat(1, 0fr);
+  }
+  .jobDetail .col-2 {
+    margin: 1rem 0;
+  }
+  .jobDetail .col-1 {
+    margin: 0rem;
+  }
+}
