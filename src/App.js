@@ -19,6 +19,9 @@ import UpdateLanguage from './components/ProfessionalDetail/UpdateLanguage';
 import UpdateEmployment from './components/ProfessionalDetail/UpdateEmployment';
 import JobDetail from './components/JobDetail/JobDetail';
 import DocumentDetail from './components/DocumentDetail/DocumentDetail';
+import HealthHistory from './components/HealthHistory/HealthHistory';
+import PhysicalInfoForm from './components/HealthHistory/PhysicalInfoForm';
+import AddHealthSummery from './components/HealthHistory/AddHealthSummery';
 
 function App() {
 
@@ -45,6 +48,9 @@ function App() {
         <Route path='/updateemployment' exact element={<UpdateEmployment />} />
         <Route path='/jobdetail' exact element={<JobDetail />} />
         <Route path='/documentdetail' exact element={<DocumentDetail />} />
+        <Route path='/healthhistory' exact element={<HealthHistory />} />
+        <Route path='/physicalinfoform' exact element={<PhysicalInfoForm />} />
+        <Route path='/addhealthsummery' exact element={<AddHealthSummery />} />
       </Routes>
       <Footer />
     </main>

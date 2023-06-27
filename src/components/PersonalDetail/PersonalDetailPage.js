@@ -108,8 +108,8 @@ const PersonalDetailPage = () => {
     personalData.map((data) => {
       return (
         <div style={{ background: data.background, display: "flex", flexGrow: "1", height: "1.5rem", padding: "10px 2rem" }} key={data.id}>
-          <p style={{ flex: "20%", fontSize: "0.9rem" }}>{data?.name}&nbsp;:</p>
-          <p style={{ fontSize: "0.9rem" }}>{data?.value}</p>
+          <p style={{ flex: "20%", fontSize: "0.9rem" }}>{data.name}&nbsp;:</p>
+          <p style={{ fontSize: "0.9rem" }}>{data.value}</p>
         </div>
       );
     });

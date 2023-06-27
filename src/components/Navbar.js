@@ -39,6 +39,7 @@ const Navbar = () => {
                     <Link className='sidemenu-link' to="/professionaldetail"><li>Professional Details</li></Link>
                     <Link className='sidemenu-link' to="/jobdetail"><li>Job Details</li></Link>
                     <Link className='sidemenu-link' to="/documentdetail"><li>Document Details</li></Link>
+                    <Link className='sidemenu-link' to="/healthhistory"><li>Health History</li></Link>
                     <Link className='sidemenu-link' to="/dashboard"><li>Help & Support</li></Link>
                 </ul>
             </div>

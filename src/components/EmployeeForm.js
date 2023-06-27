@@ -13,11 +13,19 @@ const EmployeeForm = () => {
   const [employeeSalary, setEmployeeSalary] = useState(0);
   const [employeePassword, setEmployeePassword] = useState("");
   const [shift, setShift] = useState("");
+  const [image, setImage] = useState('');
 
+  const handleFileChange = (event) => {
+    console.log(event.target.files)
+    setImage(event.target.files[0]);
+  };
   const navigate = useNavigate()
 
   const handleSubmit = async (e) => {
     e.preventDefault();
+
+    const formData = new FormData();
+    formData.append('image', image);
 
     try {
       const response = await axios.post("https://hrms-shadowwalker1025.vercel.app/api/employees/add", {
@@ -28,7 +36,8 @@ const EmployeeForm = () => {
         department: employeeDepartment,
         password: employeePassword,
         salary: employeeSalary,
-        shift: shift
+        shift: shift,
+        formData: formData
       });
 
       console.log(response.data); // Do something with the response
@@ -51,7 +60,7 @@ const EmployeeForm = () => {
 
   return (
     <main className="employeeContainer">
-      <form className="employeeFields" onClick={handleSubmit}>
+      <form className="employeeFields">
         <h2 className="heading-animate">Add Employee</h2>
         <br />
         <div className="form-div">
@@ -90,7 +99,8 @@ const EmployeeForm = () => {
           <label htmlFor="password">Password</label>
           <input id="password" type="password" placeholder="Enter Password..." onChange={(e) => setEmployeePassword(e.target.value)} value={employeePassword} required />
         </div>
-        <button className="btn-submit">SUBMIT</button>
+        <input type="file" name="image" onChange={handleFileChange} />
+        <button type="submit" className="btn-submit" onClick={handleSubmit}>SUBMIT</button>
       </form>
       <img src={hrms1} className="hrms-image" />
     </main>

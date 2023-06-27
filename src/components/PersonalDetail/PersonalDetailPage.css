@@ -1,21 +1,4 @@
-.personalDetail .info-ele::-webkit-scrollbar {
-  width: 10px;
-}
-.personalDetail .info-ele::-webkit-scrollbar-thumb {
-  background: #adadad; 
-}
-.personalDetail .address-info::-webkit-scrollbar {
-  width: 10px;
-}
-.personalDetail .address-info::-webkit-scrollbar-thumb {
-  background: #adadad; 
-}
-.personalDetail .col-3 .dependent-div::-webkit-scrollbar {
-  width: 10px;
-}
-.personalDetail .col-3 .dependent-div::-webkit-scrollbar-thumb {
-  background: #adadad; 
-}
+
 .personalDetail{
   display: flex;
   justify-content: center;
@@ -75,6 +58,7 @@
   width: 30rem;
   overflow-y: scroll;
   border: 2px solid #d4d4d4;
+  height: 16.8rem;
 }
 
 .personalDetail .address-info{

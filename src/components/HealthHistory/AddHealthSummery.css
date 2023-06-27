@@ -1,0 +1,81 @@
+.addHealthSummery{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    margin-top: 3rem;
+}
+.addHealthSummery .heading-div{
+    padding: 10px 24px;
+    width: 30rem;
+    border-bottom: 3px solid #dadada;
+    display: flex;
+    align-items: center;
+}
+.addHealthSummery .detailFields{
+    height: 25rem;
+    width: 31rem;
+    border-radius: 0 0 10px 10px;
+    padding: 1rem; 
+    border-top: none;
+}
+.addHealthSummery .detailFields input{
+    padding: 10px;
+    border-radius: 9px;
+    border: 1px solid #999999;
+    width: 13rem;
+}
+.addHealthSummery .detailFields select{
+    padding: 10px;
+    width: 14.5rem;
+    border-radius: 9px;
+    border: 1px solid #999999;
+}
+.addHealthSummery textarea{
+    border-radius: 10px;
+    max-width: 29rem;
+    min-width: 29rem;
+    padding: 1rem;
+    max-height: 79px;
+}
+.addHealthSummery .detailFields .form-div{
+    display: flex;
+    flex-direction: column;
+}
+.addHealthSummery .detailFields .btn-submit{
+    height: 2.9rem;
+    width: 9rem;
+    font-size: 0.9rem;
+    padding: 5px 10px;
+    background-color:#477bf4;
+    border-radius: 9px;
+    border: none;
+    color: white;
+    margin: 0 auto;
+    cursor: pointer;
+    margin-top: 1.3rem;
+    position: relative;
+}
+@media screen and (max-width: 425px) {
+
+    .addHealthSummery .detailFields{
+        grid-template-columns: repeat(1, 1fr);
+        height: 28rem;
+        width: 23rem;
+        padding: 8px;
+    }   
+    .addHealthSummery .heading-div{
+        padding: 10px 12px;
+        width: 22.8rem;
+        gap: 3rem;
+        font-size: 0.9rem;
+    }
+    .addHealthSummery{
+        justify-content: center;
+        margin-top: 3rem;
+        margin-left: 4rem;
+    }
+    .addHealthSummery .detailFields select{
+        width: 21.5rem;
+    }
+}

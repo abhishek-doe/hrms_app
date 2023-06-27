@@ -1,0 +1,33 @@
+.healthHistory{
+    display: flex;
+    justify-content: center;
+    align-content: center;
+}
+.healthHistory .container{
+    margin: 2rem 0;
+    gap: 3rem;
+    display: flex;
+}
+.healthHistory .health-body{
+    width: 25.9rem;
+    border: 1px solid #c0c0c0;
+    max-height: 22rem;
+    overflow-y: scroll;
+    border-radius: 0 0 10px 10px;
+}
+.healthHistory .right-side{ 
+    box-shadow: rgb(0 0 0/20%) 0px 4px 20px;
+    border-radius: 10px;
+}
+.healthHistory .threedots{
+    font-size: 1.1rem;
+    color: black;
+    cursor: pointer;
+}
+/* .healthHistory .edit-del{
+    display: none;
+}
+.healthHistory .threedots:hover .edit-del{
+    background-color: red;
+    display: block;
+} */

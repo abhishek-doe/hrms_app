@@ -6,7 +6,6 @@ import { FaDownload } from "react-icons/fa";
 
 const DocumentDetail = () => {
   return (
-    <>
       <main className="documentDetail">
         <section className="left-side">
           <h2 style={{ fontWeight: "100" }}>Add Document</h2>
@@ -71,7 +70,6 @@ const DocumentDetail = () => {
           </div>
         </section>
       </main>
-    </>
   );
 };
 
