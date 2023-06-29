@@ -17,6 +17,7 @@ const AddHealthSummery = () => {
                     <div className="form-div" style={{flex: "1"}}>
                         <label for="health-history-type">Health History Type:</label>
                         <select id="health-history-type" name="health-history-type" required>
+                            <option value="">--Select--</option>
                             <option value="accident">Accident</option>
                             <option value="checkup">Check-up</option>
                             <option value="surgery">Surgery</option>
