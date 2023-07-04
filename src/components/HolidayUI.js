@@ -13,7 +13,7 @@ const HolidayUI = () => {
   return (
     <div style={{display:"flex", justifyContent: "center", alignContent: "center"}}>
       <div className='holidays-list' style={{ minHeight: "50vh" }}>
-        <button onClick={() => navigate("/holiday")} style={{ padding: "1rem 2rem", background: "rgb(22, 101, 175)", color: "white", borderRadius: "10px", border: "none", margin: "1rem 45%" }}>Add Holiday</button>
+        <button onClick={() => navigate("/holiday")} style={{ padding: "1rem 2rem", background: "rgb(22, 101, 175)", color: "white", borderRadius: "10px", border: "none", margin: "1rem" }}>Add Holiday</button>
         <h2 className='holidays-heading'>Holidays</h2>
         <ul className='holiday-list'>
           {holidays && holidays.map((holiday) => (

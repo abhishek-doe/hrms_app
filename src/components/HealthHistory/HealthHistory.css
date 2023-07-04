@@ -24,10 +24,11 @@
     color: black;
     cursor: pointer;
 }
-/* .healthHistory .edit-del{
-    display: none;
+@media screen and (max-width: 768px){
+    .healthHistory .container{
+        flex-direction: column;
+    }
+    .healthHistory .right-side{
+        height: 30rem
+    }
 }
-.healthHistory .threedots:hover .edit-del{
-    background-color: red;
-    display: block;
-} */

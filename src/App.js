@@ -22,6 +22,9 @@ import DocumentDetail from './components/DocumentDetail/DocumentDetail';
 import HealthHistory from './components/HealthHistory/HealthHistory';
 import PhysicalInfoForm from './components/HealthHistory/PhysicalInfoForm';
 import AddHealthSummery from './components/HealthHistory/AddHealthSummery';
+import Login from './components/Login/Login';
+import ForgotPassword from './components/Login/ForgotPassword';
+import EmployeeUi from './components/EmployeeUi';
 
 function App() {
 
@@ -51,6 +54,9 @@ function App() {
         <Route path='/healthhistory' exact element={<HealthHistory />} />
         <Route path='/physicalinfoform' exact element={<PhysicalInfoForm />} />
         <Route path='/addhealthsummery' exact element={<AddHealthSummery />} />
+        <Route path='/login' exact element={<Login />} />
+        <Route path='/forgotpassword' exact element={<ForgotPassword />} />
+        <Route path='/employeeui' exact element={<EmployeeUi />} />
       </Routes>
       <Footer />
     </main>

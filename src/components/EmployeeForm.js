@@ -52,7 +52,7 @@ const EmployeeForm = () => {
       setEmployeePassword("");
       setShift("")
       alert("Employee Created Successfully");
-      navigate("/")
+      navigate("/employeeui")
     } catch (error) {
       console.error(error);
     }
@@ -99,7 +99,7 @@ const EmployeeForm = () => {
           <label htmlFor="password">Password</label>
           <input id="password" type="password" placeholder="Enter Password..." onChange={(e) => setEmployeePassword(e.target.value)} value={employeePassword} required />
         </div>
-        <input type="file" name="image" onChange={handleFileChange} />
+        {/* <input type="file" name="image" onChange={handleFileChange} /> */}
         <button type="submit" className="btn-submit" onClick={handleSubmit}>SUBMIT</button>
       </form>
       <img src={hrms1} className="hrms-image" />

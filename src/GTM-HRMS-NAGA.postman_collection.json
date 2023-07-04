@@ -1,0 +1,394 @@
+{
+	"info": {
+		"_postman_id": "5aa8367d-dba4-4d68-8535-154e90352cb5",
+		"name": "GTM-HRMS-NAGA",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+		"_exporter_id": "20951385"
+	},
+	"item": [
+		{
+			"name": "GET-AllEmployees",
+			"protocolProfileBehavior": {
+				"disableBodyPruning": true
+			},
+			"request": {
+				"method": "GET",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": ""
+				},
+				"url": {
+					"raw": "https://hrms-shadowwalker1025.vercel.app/api/employees/",
+					"protocol": "https",
+					"host": [
+						"hrms-shadowwalker1025",
+						"vercel",
+						"app"
+					],
+					"path": [
+						"api",
+						"employees",
+						""
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "POST-Adding-New-Employee",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n        \"employeeId\": \"297987248234761\",\n        \"emailId\": \"naga.tere1025@gmail.com\",\n        \"fullName\": \"Tere ShadowWalker\",\n        \"position\": \"Mern Stack Dev\",\n        \"department\": \"IT & Science\",\n        \"salary\": 5000000,\n        \"shift\": \"Morning\",\n        \"password\": \"qwerty12345\"\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "https://hrms-shadowwalker1025.vercel.app/api/employees/add",
+					"protocol": "https",
+					"host": [
+						"hrms-shadowwalker1025",
+						"vercel",
+						"app"
+					],
+					"path": [
+						"api",
+						"employees",
+						"add"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "POST-Login",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n  \"email\": \"nagatere10251@gmail.com\",\n  \"password\": \"qwerty12345\"\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "https://hrms-shadowwalker1025.vercel.app/api/login",
+					"protocol": "https",
+					"host": [
+						"hrms-shadowwalker1025",
+						"vercel",
+						"app"
+					],
+					"path": [
+						"api",
+						"login"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "POST-Signup",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n    \"fullName\": \"Nagendra Tere\",\n    \"email\": \"nagatere10251@gmail.com\",\n    \"password\": \"qwerty12345\",\n    \"confirmPassword\": \"qwerty12345\"\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "https://hrms-shadowwalker1025.vercel.app/api/signup",
+					"protocol": "https",
+					"host": [
+						"hrms-shadowwalker1025",
+						"vercel",
+						"app"
+					],
+					"path": [
+						"api",
+						"signup"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "GET-Employee-By-Id",
+			"protocolProfileBehavior": {
+				"disableBodyPruning": true
+			},
+			"request": {
+				"method": "GET",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "https://hrms-shadowwalker1025.vercel.app/api/employees/297987248234761",
+					"protocol": "https",
+					"host": [
+						"hrms-shadowwalker1025",
+						"vercel",
+						"app"
+					],
+					"path": [
+						"api",
+						"employees",
+						"297987248234761"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "PUT-Update-Employee-By-Id",
+			"request": {
+				"method": "PUT",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n        \"employeeId\": \"297987248234761\",\n        \"emailId\": \"naga.tere1025@gmail.com\",\n        \"fullName\": \"Tere ShadowWalker 123\",\n        \"position\": \"Mern Stack Dev\",\n        \"department\": \"IT & Science\",\n        \"salary\": 5000000,\n        \"shift\": \"Morning\",\n        \"password\": \"qwerty12345\"\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "https://hrms-shadowwalker1025.vercel.app/api/employees/297987248234761",
+					"protocol": "https",
+					"host": [
+						"hrms-shadowwalker1025",
+						"vercel",
+						"app"
+					],
+					"path": [
+						"api",
+						"employees",
+						"297987248234761"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "POST-Employee-Attendance-Login",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"url": {
+					"raw": "https://hrms-shadowwalker1025.vercel.app/api/attendance/login",
+					"protocol": "https",
+					"host": [
+						"hrms-shadowwalker1025",
+						"vercel",
+						"app"
+					],
+					"path": [
+						"api",
+						"attendance",
+						"login"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "GET-All-Employee-Attendance-Login-Details",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "https://hrms-shadowwalker1025.vercel.app/api/attendance/login",
+					"protocol": "https",
+					"host": [
+						"hrms-shadowwalker1025",
+						"vercel",
+						"app"
+					],
+					"path": [
+						"api",
+						"attendance",
+						"login"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "GET-Employee-Attendance-Login-By-Id",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "https://hrms-shadowwalker1025.vercel.app/api/attendance/login/12345",
+					"protocol": "https",
+					"host": [
+						"hrms-shadowwalker1025",
+						"vercel",
+						"app"
+					],
+					"path": [
+						"api",
+						"attendance",
+						"login",
+						"12345"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "PUT-Update-Employee-Attendance-Login-By-Id",
+			"request": {
+				"method": "PUT",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n    \"employeeId\": \"12345\",\n    \"loginTime\": \"01:13:09\",\n    \"attendance\": true,\n    \"shift\": \"Morning\"\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "https://hrms-shadowwalker1025.vercel.app/api/attendance/login/12345",
+					"protocol": "https",
+					"host": [
+						"hrms-shadowwalker1025",
+						"vercel",
+						"app"
+					],
+					"path": [
+						"api",
+						"attendance",
+						"login",
+						"12345"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "GET-Employee-Attendance-Logout-Details",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "https://hrms-shadowwalker1025.vercel.app/api/attendance/logout",
+					"protocol": "https",
+					"host": [
+						"hrms-shadowwalker1025",
+						"vercel",
+						"app"
+					],
+					"path": [
+						"api",
+						"attendance",
+						"logout"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "POST-Employee-Attendance-Logout-Details",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "https://hrms-shadowwalker1025.vercel.app/api/attendance/logout/",
+					"protocol": "https",
+					"host": [
+						"hrms-shadowwalker1025",
+						"vercel",
+						"app"
+					],
+					"path": [
+						"api",
+						"attendance",
+						"logout",
+						""
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "GET-Employee-Attendance-Logout-Details",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "https://hrms-shadowwalker1025.vercel.app/api/attendance/logout/12346",
+					"protocol": "https",
+					"host": [
+						"hrms-shadowwalker1025",
+						"vercel",
+						"app"
+					],
+					"path": [
+						"api",
+						"attendance",
+						"logout",
+						"12346"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "PUT-Update-Employee-Attendance-Logout-Details",
+			"request": {
+				"method": "PUT",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n        \"employeeId\": \"12346\"\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "https://hrms-shadowwalker1025.vercel.app/api/attendance/logout/12346",
+					"protocol": "https",
+					"host": [
+						"hrms-shadowwalker1025",
+						"vercel",
+						"app"
+					],
+					"path": [
+						"api",
+						"attendance",
+						"logout",
+						"12346"
+					]
+				}
+			},
+			"response": []
+		}
+	]
+}

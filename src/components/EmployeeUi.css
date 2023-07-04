@@ -1,0 +1,132 @@
+.employeeui{
+    display: flex;
+    justify-content: center;
+}
+.employeeui .container{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin: 2rem;
+}
+.employeeui .cardDiv{
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    margin-top: 5rem;
+}
+.employeeui .employeecard{
+    display: flex;
+    flex-direction: column;
+    width: 18rem;
+    padding: 1rem;
+    margin: 1rem 2rem;
+    border-radius: 10px;
+    height: 18rem;
+    max-height: 30rem;
+    border: 1px solid #eee;
+    box-shadow: rgb(0 0 0/30%) 0px 4px 15px;
+    transition: .2s;
+    gap: 4px;
+}
+.employeeui .employeecard:hover{
+    background-color: #3f3f3f;
+    color: white;
+}
+.employeeui .employeecard .userIcon{
+    font-size: 6rem;
+    color: #303030;
+    align-self: center;
+    margin: 1rem 0;
+    margin-bottom: 1.4rem;
+}
+.employeeui .employeecard:hover .userIcon{
+    color: rgb(233, 233, 233);
+}
+.employeeui .input-container{
+    position: absolute;
+    width: 68rem;
+    margin-top: 2.5rem;
+    margin-left: 3rem;
+}
+.employeeui .input-field{
+    padding: 10px;
+    padding-left: 2rem;
+    border: 2px solid #303030;
+    border-radius: 10px;
+    width: 74%;
+}
+.employeeui .icon{
+    position: absolute;
+    top: 13px;
+    color: #3f3f3f;
+    left: 10px;
+}
+.employeeui .addemployee{
+    padding: 13px 15px;
+    margin-left: 2.5rem;
+    background-color: rgb(31, 130, 211);
+    border-radius: 7px;
+    color: white;
+    border: none;
+}
+@media screen and (max-width: 1024px) {
+    .employeeui .cardDiv{
+        grid-template-columns: repeat(2, 1fr);
+    }
+    .employeeui .input-container{
+        width: 45rem;
+        margin-top: 2.5rem;
+        margin-left: -1rem;
+    }
+    .employeeui .input-field{
+        padding: 10px;
+        padding-left: 2rem;
+        border: 2px solid #303030;
+        border-radius: 10px;
+        width: 71%;
+    }
+    .employeeui .addemployee{
+        margin-left: 1rem;
+    }
+}
+@media screen and (max-width: 768px) {
+    .employeeui .cardDiv{
+        grid-template-columns: repeat(2, 1fr);
+        margin-left: 2rem;
+    }
+    .employeeui .input-container{
+        width: 45rem;
+        margin-top: 2.5rem;
+        margin-left: 2rem;
+    }
+    .employeeui .input-field{
+        padding: 10px;
+        padding-left: 2rem;
+        border: 2px solid #303030;
+        border-radius: 10px;
+        width: 71%;
+    }
+    .employeeui .addemployee{
+        margin-left: 1rem;
+    }
+}
+@media screen and (max-width: 425px) {
+    .employeeui .cardDiv{
+        grid-template-columns: repeat(1, 1fr);
+        margin-left: 7rem;
+    }
+    .employeeui .input-container{
+        width: 45rem;
+        margin-top: 2.5rem;
+        margin-left: 23rem;
+    }
+    .employeeui .input-field{
+        padding: 10px;
+        padding-left: 2rem;
+        border: 2px solid #303030;
+        border-radius: 10px;
+        width: 40%;
+    }
+    .employeeui .addemployee{
+        margin-left: 1rem;
+    }
+}

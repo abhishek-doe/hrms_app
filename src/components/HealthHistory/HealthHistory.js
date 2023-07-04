@@ -50,7 +50,7 @@ const HealthHistory = () => {
             detail: "General Health Checkup"
         },
         {
-            id: 2,
+            id: 3,
             summery: "Health Information",
             name: "General Checkup",
             date: "11-Aug-2019",
@@ -67,7 +67,7 @@ const HealthHistory = () => {
     })
     const summeryElement = summeryData && summeryData.map(data => {
         return (
-            <div style={{ padding: "5px 1rem", borderBottom: "1px solid #d4d4d4" }}>
+            <div style={{ padding: "5px 1rem", borderBottom: "1px solid #d4d4d4" }} key={data.id}>
                 <div style={{ display: "flex", color: "#999999", margin: "5px 0" }}>
                     <p style={{ flex: "1" }}>{data.name}</p>
                     <p>{data.date}</p>

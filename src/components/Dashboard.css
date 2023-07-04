@@ -1,5 +1,10 @@
 .dashboard{
     display: flex;
+    align-items: center;
+    justify-content: center;
+}
+.dashboard .container{
+    display: flex;
     justify-content: center;
     align-items: center;
     flex-direction: column;
@@ -90,6 +95,10 @@
     flex-direction: row;
     gap: 3rem;
     border: 3px solid #eee;
+}
+.dashboard .row-2 .holidays .holiday-1:hover, .holiday-2:hover, .holiday-3:hover, .holiday-4:hover, .holiday-5:hover{
+    transition: .2s ease-in-out;
+    scale: 1.05;
 }
 .dashboard .row-2 .holidays .holiday-1{
     background: #ff8021;
