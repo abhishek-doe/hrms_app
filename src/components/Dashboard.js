@@ -126,7 +126,7 @@ const Dashboard = () => {
                     <div className="holidays">
                         <div>
                             <p>&nbsp;&nbsp;&nbsp;&nbsp;Upcoming <br />&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Holidays</p>
-                            <div className="holiday-1"><br />
+                            <div className="holiday-1" style={{background: "#ff8021"}}><br />
                                 <p>Holiday</p>
                                 <h1>&nbsp;25</h1>
                                 <p>Mar-2024</p>
@@ -134,19 +134,19 @@ const Dashboard = () => {
                             </div>
                         </div>
                         <div>
-                            <div className="holiday-2">
+                            <div className="holiday-2" style={{background: "#5fccf3"}}>
                                 <p>13-Jan-2024</p>
                                 <p>Lohri</p>
                             </div>
-                            <div className="holiday-3">
+                            <div className="holiday-3" style={{background: "#1ceb83"}}>
                                 <p>14-Jan-2024</p>
                                 <p>Makar Sakranti</p>
                             </div>
-                            <div className="holiday-4">
+                            <div className="holiday-4" style={{background: "#5dceb0"}}>
                                 <p>23-Oct-2024</p>
                                 <p>Dusshera</p>
                             </div>
-                            <div className="holiday-5">
+                            <div className="holiday-5" style={{background: "#33bbcb"}}>
                                 <p>12-Nov-2024</p>
                                 <p>Diwali</p>
                             </div>

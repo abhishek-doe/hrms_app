@@ -26,11 +26,11 @@ input[type="number"]::-webkit-outer-spin-button {
 ::-webkit-scrollbar {
   width: 10px;
   background-color: #ffffff;
-  border-radius: 19px;
+  border-radius: 10px;
 }
 ::-webkit-scrollbar-thumb {
   background: #adadad;
-  border-radius: 19px;
+  border-radius: 10px;
 }
 li{
   list-style-type: none;

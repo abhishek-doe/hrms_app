@@ -1,269 +1,250 @@
-.dashboard{
-    display: flex;
-    align-items: center;
-    justify-content: center;
+.dashboard {
+  display: flex;
+  align-content: center;
+  justify-content: center;
 }
-.dashboard .container{
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    flex-direction: column;
+.dashboard .container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
 }
-.dashboard .row-1{
-    display: grid;
-    grid-template-columns: repeat( 4, 0fr);
-    height: 100%;
-    margin: 3rem 0;
-    gap: 2rem;
+.dashboard .row-1 {
+  display: grid;
+  grid-template-columns: repeat(4, 0fr);
+  margin: 2rem 0;
+  gap: 1rem;
 }
 .dashboard .profile {
-    /* margin: 0rem 2rem; */
-    padding: 1rem;
-    height: 6rem;
-    width: 17rem;
-    box-shadow: rgb( 0 0 0 / 15%) 0px 4px 20px;
-    border-radius: 10px;
-    justify-content: center;
-    display: flex;
-    gap: 1rem;
-    color: #505050;
+  /* margin: 0rem 2rem; */
+  padding: 1rem;
+  height: 6rem;
+  width: 17rem;
+  box-shadow: rgb(0 0 0 / 10%) 0px 4px 20px;
+  border-radius: 10px;
+  justify-content: center;
+  display: flex;
+  gap: 1rem;
+  color: #505050;
 }
-.dashboard .user-image{
-    font-size: 4.5rem;
-    color: #5e5e5e;
+.dashboard .user-image {
+  font-size: 4.5rem;
+  color: #5e5e5e;
 }
-.dashboard .lastsignin{
-    height: 6rem;
-    width: 16rem;
-    box-shadow: rgb( 0 0 0 / 15%) 0px 4px 20px;
-    border-radius: 10px;
-    padding: 1rem;
-    font-size: 1.1rem;
-    display: flex;
-    flex-direction: row;
-    justify-items: center;
-    align-items: center;
-    gap: 2rem;
-    color: #464646;
+.dashboard .lastsignin {
+  height: 6rem;
+  width: 16rem;
+  box-shadow: rgb(0 0 0 / 10%) 0px 4px 20px;
+  border-radius: 10px;
+  padding: 1rem;
+  font-size: 1.1rem;
+  display: flex;
+  flex-direction: row;
+  justify-items: center;
+  align-items: center;
+  gap: 2rem;
+  color: #464646;
 }
-.dashboard .lastsignin div{
- margin-left: 1rem;
+.dashboard .lastsignin div {
+  margin-left: 1rem;
 }
-.dashboard .teamsize div{
- margin-left: 1rem;
+.dashboard .teamsize div {
+  margin-left: 1rem;
 }
-.dashboard .teamsize{
-    height: 6rem;
-    width: 16rem;
-    box-shadow: rgb( 0 0 0 / 15%) 0px 4px 20px;
-    border-radius: 10px;
-    padding: 1rem 1.3rem ;
-    font-size: 1.1rem;
-    display: flex;
-    flex-direction: row;
-    justify-items: center;
-    align-items: center;
-    color: #444444;
-    gap: 2rem;
+.dashboard .teamsize {
+  height: 6rem;
+  width: 16rem;
+  box-shadow: rgb(0 0 0 / 10%) 0px 4px 20px;
+  border-radius: 10px;
+  padding: 1rem 1.3rem;
+  font-size: 1.1rem;
+  display: flex;
+  flex-direction: row;
+  justify-items: center;
+  align-items: center;
+  color: #444444;
+  gap: 2rem;
 }
-.dashboard .shifts{
-    height: 6rem;
-    width: 16rem;
-    box-shadow: rgb( 0 0 0 / 15%) 0px 4px 20px;
-    border-radius: 10px;
-    padding: 1rem;
-    font-size: 1.1rem;
-    display: flex;
-    flex-direction: row;
-    justify-items: center;
-    align-items: center;
-    color: #3c3c3c;
-    gap: 2rem;
-}
-
-.dashboard .row-2{
-    display: grid;
-    grid-template-columns: repeat(3, 0fr);
-}
-.dashboard .row-2 .holidays{
-    height: 20rem;
-    width: 20rem;
-    box-shadow: rgb(0 0 0/ 10%) 0px 4px 20px;
-    border-radius: 10px;
-    padding: 2rem;
-    display: flex;
-    flex-direction: row;
-    gap: 3rem;
-    border: 3px solid #eee;
-}
-.dashboard .row-2 .holidays .holiday-1:hover, .holiday-2:hover, .holiday-3:hover, .holiday-4:hover, .holiday-5:hover{
-    transition: .2s ease-in-out;
-    scale: 1.05;
-}
-.dashboard .row-2 .holidays .holiday-1{
-    background: #ff8021;
-    color: white;
-    padding: 1rem;
-    border-radius: 5px;
-    margin-top: 3rem;
-    height: 11.4rem;
-    width: 6rem;
-    padding: 1rem;
+.dashboard .shifts {
+  height: 6rem;
+  width: 16rem;
+  box-shadow: rgb(0 0 0 / 10%) 0px 4px 20px;
+  border-radius: 10px;
+  padding: 1rem;
+  font-size: 1.1rem;
+  display: flex;
+  flex-direction: row;
+  justify-items: center;
+  align-items: center;
+  color: #3c3c3c;
+  gap: 2rem;
 }
 
-.dashboard .row-2 .holidays .holiday-2{
-    background: #5fccf3;
-    padding: 0.5rem;
-    width: 100%;
-    border-radius: 5px;
-    color: white;
-    margin-bottom: 1rem;
+.dashboard .row-2 {
+  display: grid;
+  grid-template-columns: repeat(3, 0fr);
 }
-.dashboard .row-2 .holidays .holiday-3{
-    background: #1ceb83;
-    padding: 0.5rem;
-    width: 100%;
-    border-radius: 5px;
-    color: white;
-    margin: 1rem 0rem;
+.dashboard .row-2 .holidays {
+  height: 20rem;
+  width: 20rem;
+  box-shadow: rgb(0 0 0/ 10%) 0px 4px 20px;
+  border-radius: 10px;
+  padding: 2rem;
+  display: flex;
+  flex-direction: row;
+  gap: 3rem;
+  border: 3px solid #eee;
 }
-.dashboard .row-2 .holidays .holiday-4{
-    background: #5dceb0;
-    padding: 0.5rem;
-    width: 100%;
-    border-radius: 5px;
-    color: white;
-    margin: 1rem 0rem;
+.dashboard .row-2 .holidays .holiday-1:hover,
+.holiday-2:hover,
+.holiday-3:hover,
+.holiday-4:hover,
+.holiday-5:hover {
+  transition: 0.2s ease-in-out;
+  scale: 1.05;
+  cursor: context-menu;
 }
-.dashboard .row-2 .holidays .holiday-5{
-    background: #33bbcb;
-    padding: 0.5rem;
-    width: 100%;
-    border-radius: 5px;
-    color: white;
-    margin: 1rem 0rem;
+.dashboard .row-2 .holidays .holiday-1 {
+  color: white;
+  padding: 1rem;
+  border-radius: 5px;
+  margin-top: 3rem;
+  height: 11.4rem;
+  width: 6rem;
+  padding: 1rem;
 }
-.dashboard .occasion{
-    margin: 0 2rem;
+
+.dashboard .row-2 .holidays .holiday-2,
+.holiday-3,
+.holiday-4,
+.holiday-5 {
+  padding: 0.5rem;
+  width: 100%;
+  border-radius: 5px;
+  color: white;
+  margin-bottom: 1rem;
 }
-.dashboard .occasion ul{
-    display: flex;
-    border-bottom: 1px solid #d1d1d1;
+.dashboard .occasion {
+  margin: 0 2rem;
 }
-.dashboard .occasion li{
-    list-style-type: none;
-    font-size: 1rem;
-    border-bottom: 5px solid #ffffff;
-    border-left: 3px solid #ffffff;
-    border-right: 3px solid #ffffff;
-    padding: 1rem 13px;
+.dashboard .occasion ul {
+  display: flex;
+  border-bottom: 1px solid #999999;
 }
-.dashboard .occasion li:hover{
-    border-bottom: 5px solid #708ccb;
-    border-left: 3px solid #e7e7e7;
-    border-right: 3px solid #e8e8e8;
+.dashboard .occasion li {
+  list-style-type: none;
+  font-size: 1rem;
+  border-bottom: 5px solid #ffffff;
+  border-left: 3px solid #ffffff;
+  border-right: 3px solid #ffffff;
+  padding: 1rem 13px;
 }
-.dashboard .occasion{
-    height: 24rem;
-    width: 24rem;
-    box-shadow: rgb(0 0 0/ 10%) 0px 4px 20px;
-    border: 3px solid #eee;
-    /* padding: 2rem; */
-    border-radius: 15px;
+.dashboard .occasion li:hover {
+  border-bottom: 5px solid #708ccb;
+  border-left: 3px solid #e7e7e7;
+  border-right: 3px solid #e8e8e8;
+  cursor: pointer;
 }
-.dashboard .occasion .box{
-    display: grid;
+.dashboard .occasion {
+  height: 24rem;
+  width: 24rem;
+  box-shadow: rgb(0 0 0/ 10%) 0px 4px 20px;
+  border: 3px solid #eee;
+  /* padding: 2rem; */
+  border-radius: 15px;
+}
+.dashboard .occasion .box {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  width: 100%;
+  margin-bottom: 0.3rem;
+}
+.dashboard .occasion-box {
+  margin: 12px 16px;
+  height: 90%;
+  width: 80%;
+  border: 2px solid #cacaca;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  border-radius: 15px;
+}
+.dashboard .occasion-box:hover {
+  border: 2px solid rgb(16, 91, 153);
+}
+
+.dashboard .barchart-div {
+  border: 1px solid rgb(216, 216, 216);
+  padding: 1rem;
+  box-shadow: rgb(0 0 0/10%) 0px 4px 20px;
+  width: 22.5rem;
+  height: 22rem;
+  border-radius: 10px;
+  border-top: 8px solid #57a645;
+}
+.dashboard .monthly-btn {
+  padding: 5px;
+  width: 5rem;
+  font-size: 0.7rem;
+  background: #437ceb;
+  border: 1px solid gray;
+  color: white;
+  border-radius: 3px;
+}
+.dashboard .monthly-btn:hover {
+  background: white;
+  color: black;
+}
+.dashboard .yearly-btn {
+  padding: 5px;
+  width: 5rem;
+  font-size: 0.7rem;
+  background: #437ceb;
+  border: 1px solid gray;
+  color: white;
+  border-radius: 3px;
+}
+.dashboard .yearly-btn:hover {
+  background: white;
+  color: black;
+}
+.dashboard .present-inp {
+  margin-left: 1rem;
+  width: 159px;
+  font-size: 0.7rem;
+  padding: 2px;
+  color: #727272;
+  border-radius: 5px;
+  border: none;
+}
+@media screen and (max-width: 1300px) {
+  .dashboard .row-1 {
+    grid-template-columns: repeat(3, 1fr);
+  }
+}
+
+@media screen and (max-width: 1000px) {
+  .dashboard .row-1 {
     grid-template-columns: repeat(2, 1fr);
-    width: 100%;
-    margin-bottom: 0.3rem;
-}
-.dashboard .occasion-box{
-    margin: 12px 16px;
-    height: 90%;
-    width: 80%;
-    border: 2px solid #cacaca;
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
-    border-radius: 15px;
-}
-.dashboard .occasion-box:hover{
-    border: 2px solid rgb(255, 188, 235);
+  }
 }
 
-.dashboard .barchart-div{
-    border: 1px solid rgb(216, 216, 216);
-    padding: 1rem;
-    box-shadow: rgb(0 0 0/10%) 0px 4px 20px;
-    width: 22.5rem;
-    height: 22rem;
-    border-radius: 10px;
-    border-top: 8px solid #57a645;
-}
-.dashboard .monthly-btn{
-    padding: 5px;
-    width: 5rem;
-    font-size: 0.7rem;
-    background: #437ceb;
-    border: 1px solid gray;
-    color: white;
-    border-radius: 3px;
-}
-.dashboard .monthly-btn:hover{
-    background: white;
-    color: black;
-}
-.dashboard .yearly-btn{
-    padding: 5px;
-    width: 5rem;
-    font-size: 0.7rem;
-    background: #437ceb;
-    border: 1px solid gray;
-    color: white;
-    border-radius: 3px;
-}
-.dashboard .yearly-btn:hover{
-    background: white;
-    color: black;
-}
-.dashboard .present-inp{
-    margin-left: 1rem;
-    width: 159px;
-    font-size: 0.7rem;
-    padding: 2px;
-    color: #727272;
-    border-radius: 5px;
-    border: none;
-}
-@media screen and (max-width: 1300px){
-    .dashboard .row-1{
-        grid-template-columns: repeat(3, 1fr);
-    }
+@media screen and (max-width: 1130px) {
+  .dashboard .row-2 {
+    grid-template-columns: repeat(2, 1fr);
+  }
+  .dashboard .barchart-div {
+    margin-top: 2rem;
+  }
 }
 
-@media screen and (max-width: 1000px){
-    .dashboard .row-1{
-        grid-template-columns: repeat(2, 1fr);
-    }
-}
-
-@media screen and (max-width: 1130px){
-    .dashboard .row-2{
-        grid-template-columns: repeat(2, 1fr);
-    }
-    .dashboard .barchart-div{
-        margin-top: 2rem;
-    }
-}
-
-@media screen and (max-width: 768px){
-    
-    .dashboard .row-2{
-        grid-template-columns: repeat(1, 1fr);
-    }
-    .dashboard .occasion{
-        margin-left: 0rem;
-        margin-top: 2rem;
-    }
+@media screen and (max-width: 768px) {
+  .dashboard .row-2 {
+    grid-template-columns: repeat(1, 1fr);
+  }
+  .dashboard .occasion {
+    margin-left: 0rem;
+    margin-top: 2rem;
+  }
 }

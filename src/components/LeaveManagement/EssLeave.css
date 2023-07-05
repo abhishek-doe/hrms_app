@@ -1,0 +1,104 @@
+.essLeave {
+  display: flex;
+  align-content: center;
+  justify-content: center;
+}
+.essLeave .container {
+  display: grid;
+  grid-template-columns: repeat(2, 0fr);
+  margin: 1rem;
+  gap: 1rem;
+}
+.essLeave .left-side .lHistory-tag {
+  display: flex;
+  padding: 10px 1.2rem;
+  border: 1px solid #d4d4d4;
+  border-radius: 5px;
+  width: 32.9rem;
+}
+.essLeave .left-side .lHistory-tag .earned-leave,
+.sort-leave {
+  background-color: #5db2ff;
+  border: none;
+  padding: 5px 10px;
+  color: white;
+  border-radius: 6px;
+}
+.essLeave .left-side .historyElement {
+  max-height: 27rem;
+  width: 35.3rem;
+  overflow-y: scroll;
+  border: 1px solid #d4d4d4;
+}
+.essLeave .left-side .leavesCard {
+  margin: 5px 0;
+  border-bottom: 1px solid #666666;
+  display: flex;
+  padding: 5px 10px;
+}
+.essLeave .right-side{
+    max-width: 35.3rem;
+    /* overflow-x: scroll; */
+}
+.essLeave .right-side .quota {
+  display: flex;
+  border: 1px solid #d4d4d4;
+  border-radius: 10px 10px 0 0;
+  width: 35.25rem;
+}
+.essLeave .right-side .quota .quota-li {
+  list-style-type: none;
+  font-size: 1rem;
+  border-bottom: 5px solid #ffffff;
+  border-left: 3px solid #ffffff;
+  border-right: 3px solid #ffffff;
+  padding: 11px 13px;
+  cursor: pointer;
+}
+.essLeave .right-side .quota .quota-active {
+  border-bottom: 5px solid #708ccb;
+  padding: 11px 13px;
+  border-left: 3px solid #e7e7e7;
+  border-right: 3px solid #e8e8e8;
+  cursor: pointer;
+}
+.essLeave .right-side .table-div{
+  padding: 0 1rem;
+}
+.essLeave .right-side .table-div{
+    max-width: 39rem;
+    overflow-x: scroll;
+    border: 1px solid #d4d4d4;
+    border-radius: 0px 0px 10px 10px;
+    height: 27rem;
+}
+.essLeave .right-side .thead{
+  border-bottom: 10px solid black;
+}
+.essLeave .right-side .th{
+  margin: 5px 1rem;
+  padding: 10px 1rem;
+  white-space: nowrap;
+  border: 1px solid #666666;
+  background-color: #eee;
+}
+.essLeave .right-side .td{
+  margin: 5px 1rem;
+  padding: 5px 1rem;
+  border: 1px solid rgb(192, 192, 192) ;
+  height: 2.5rem;
+  white-space: nowrap;
+  color: #666666;
+}
+.essLeave .right-side .calender-div{
+  padding: 10px 2.3rem;
+  display: flex;
+  gap: 1rem;
+  justify-content: end;
+  align-items: center;
+}
+.essLeave .right-side .calender-select{
+  padding: 5px;
+  border-radius: 5px;
+  color: #666666;
+}

@@ -51,7 +51,6 @@ const EmployeeForm = () => {
       setEmployeeEmail("");
       setEmployeePassword("");
       setShift("")
-      alert("Employee Created Successfully");
       navigate("/employeeui")
     } catch (error) {
       console.error(error);

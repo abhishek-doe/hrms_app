@@ -14,7 +14,7 @@ const Footer = () => {
             <img src={gtmlogo1} alt="G.T.M." style={{ height: "80px", borderRadius: "50%" }} />
           </Link>
 
-          <p className="description"> Our H.R.M.S. service is best platform for centerialized HR functions that integrates all functions.</p>
+          <p className="description"> Our H.R.M.S. service is best platform for centerialized HR functions that integrates all management functions.</p>
         </section>
 
         <section className="section">

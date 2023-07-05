@@ -2,24 +2,27 @@ import React, { useState } from "react";
 import { FaUser, FaLock } from "react-icons/fa";
 import "./Login.css";
 import { Link } from "react-router-dom";
+import { useDispatch } from "react-redux";
+import axios from "axios";
+import {login} from "../../featured/login"
+import { useNavigate } from "react-router-dom";
 
 const LoginPage = () => {
     const [employeeId, setEmployeeId] = useState("");
     const [password, setPassword] = useState("");
+    const dispatch = useDispatch();
+    const navigate = useNavigate()
 
-    const handleInputChange = (event) => {
-        const { name, value } = event.target;
-        if (name === "employeeId") {
-            setEmployeeId(value);
-        } else if (name === "password") {
-            setPassword(value);
-        }
-    };
 
     const handleSubmit = (event) => {
         event.preventDefault();
-        // Perform login validation or authentication logic here
+        
+        axios.post("https://hrms-shadowwalker1025.vercel.app/api/login", {
+            email: employeeId,
+            password: password
+        }).then(res => dispatch(login(res.data)))
         console.log("Login submitted!");
+        navigate("/")
     };
 
     return (
@@ -32,10 +35,10 @@ const LoginPage = () => {
                         <FaUser className="icon" />
                         <input
                             htmlFor="id"
-                            type="text"
+                            type="email"
                             name="employeeId"
                             value={employeeId}
-                            onChange={handleInputChange}
+                            onChange={(e) => setEmployeeId(e.target.value)}
                             className="input-field"
                             placeholder="Employee Id"
                         />
@@ -48,7 +51,7 @@ const LoginPage = () => {
                             type="password"
                             name="password"
                             value={password}
-                            onChange={handleInputChange}
+                            onChange={(e) => setPassword(e.target.value)}
                             className="input-field"
                             placeholder="Password"
                         />

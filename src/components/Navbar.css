@@ -31,7 +31,7 @@
   display: none;
 }
 .navbar .side-menu_active {
-  height: 100%;
+  height: 90%;
   width: 20%;
   position: absolute;
   left: 0;
@@ -75,6 +75,11 @@
 .navbar .gtm-logo {
   height: 80px;
 }
+.navbar .gtm-logo::selection{
+  background: none;
+  color: none;
+}
+
 
 @media screen and (max-width: 1024px) {
   .navbar .container {
