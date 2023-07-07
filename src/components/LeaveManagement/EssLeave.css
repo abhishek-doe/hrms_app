@@ -6,19 +6,19 @@
 .essLeave .container {
   display: grid;
   grid-template-columns: repeat(2, 0fr);
-  margin: 1rem;
+  margin: 2rem 0;
   gap: 1rem;
 }
 .essLeave .left-side .lHistory-tag {
   display: flex;
   padding: 10px 1.2rem;
   border: 1px solid #d4d4d4;
-  border-radius: 5px;
+  border-radius: 10px 10px 0 0;
   width: 32.9rem;
 }
 .essLeave .left-side .lHistory-tag .earned-leave,
 .sort-leave {
-  background-color: #5db2ff;
+  background-color: #2670c5;
   border: none;
   padding: 5px 10px;
   color: white;
@@ -29,6 +29,7 @@
   width: 35.3rem;
   overflow-y: scroll;
   border: 1px solid #d4d4d4;
+  border-radius: 0 0 10px 10px;
 }
 .essLeave .left-side .leavesCard {
   margin: 5px 0;
@@ -96,9 +97,35 @@
   gap: 1rem;
   justify-content: end;
   align-items: center;
+  margin: 10px 0;
 }
 .essLeave .right-side .calender-select{
   padding: 5px;
   border-radius: 5px;
   color: #666666;
+}
+
+@media screen and (max-width: 1024px){
+  .essLeave .container {
+    grid-template-columns: repeat(1, 0fr);
+  }
+}
+@media screen and (max-width: 425px){
+  .essLeave .left-side .lHistory-tag {
+    padding: 10px 1.2rem;
+    width: 28rem;
+    margin-left: 5.5rem;
+  }
+  .essLeave .left-side .historyElement {
+    max-height: 27rem;
+    width: 30.4rem;
+    margin-left: 5.5rem;
+  }
+  .essLeave .right-side{
+    max-width: 30rem;
+    margin-left: 5.5rem;
+}
+.essLeave .right-side .quota {
+  width: 30rem;
+}
 }
