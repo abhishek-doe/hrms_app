@@ -1,6 +1,6 @@
 /* HolidaysPage.css */
 .holidays-page {
-  max-width: 600px;
+  width: 500px;
   margin: 0 auto;
   padding: 20px;
 }
@@ -8,9 +8,10 @@
 .holiday-form {
   margin-bottom: 20px;
   border-radius: 10px;
-  padding: 3rem;
-  box-shadow: rgb(0 0 0/ 10%) 0px 4px 20px;
-  margin-top: 3rem;
+  padding: 2rem 2rem;
+  /* box-shadow: rgb(0 0 0/ 10%) 0px 4px 20px; */
+  box-shadow: rgb(0 0 0/ 20%) 0px 4px 20px;
+  margin-top: 1rem;
 }
 .holiday-form h2{
   margin-bottom: 2rem;
@@ -23,17 +24,18 @@
 
 .holiday-form input,
 .holiday-form textarea {
-  width: 100%;
+  width: 25rem;
   padding: 10px;
   margin-bottom: 10px;
   border: 1px solid #ccc;
   border-radius: 5px;
-  max-width: 30rem;
+  max-width: 25rem;
+  min-width: 25rem;
   max-height: 4rem;
 }
 .holiday-list{
   display: grid;
-  grid-template-columns: repeat(3, 1fr);
+  grid-template-columns: repeat(2, 1fr);
 }
 .holiday-list li {
   background-color: #f9f9f9;
@@ -41,7 +43,8 @@
   margin: 2rem 1rem;
   border-radius: 5px;
   list-style-type: none;
-  border: 1px solid black;
+  border: 1px solid rgb(185, 185, 185);
+  box-shadow: rgb(0 0 0/ 10%) 0px 4px 20px;
   padding: 1rem;
 }
 
@@ -67,7 +70,7 @@
   height: 3rem;
   font-size: 1.1rem;
   width: 50%;
-  margin: 1rem 7rem;
+  margin: 10px 7rem;
   background: rgb(33, 97, 170);
   border: none;
   color: white;

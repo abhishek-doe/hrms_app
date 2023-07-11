@@ -1,37 +1,29 @@
-import React, { useEffect } from 'react'
+import React from 'react'
 import { useSelector } from 'react-redux';
-import { useNavigate } from 'react-router-dom';
+import HolidayForm from "./HolidayForm";
 
 const HolidayUI = () => {
   const holidays = useSelector(state => state.holiday)
-  const navigate = useNavigate()
-
-  useEffect(() => {
-    console.log(holidays)
-  }, [holidays])
 
   return (
-    <div style={{display:"flex", justifyContent: "center", alignContent: "center"}}>
+    <main style={{ display: "flex", justifyContent: "center", alignContent: "center", marginTop: "2rem" }}>
       <div className='holidays-list' style={{ minHeight: "50vh" }}>
-        <button onClick={() => navigate("/holiday")} style={{ padding: "1rem 2rem", background: "rgb(22, 101, 175)", color: "white", borderRadius: "10px", border: "none", margin: "1rem" }}>Add Holiday</button>
         <h2 className='holidays-heading'>Holidays</h2>
         <ul className='holiday-list'>
-          {holidays && holidays.map((holiday) => (
+          {holidays && holidays.map((holiday, i) => (
             <li key={holiday.id}>
               <div className='serial-name'>
-                <h3>{holiday.serial}.&nbsp;</h3>
                 <h3>{holiday.name}</h3>
               </div>
-              <p>Date: <span style={{ fontWeight: "bold" }}>{holiday.date}</span></p>
-              <p>Description: <span style={{ fontWeight: "700" }}>{holiday.description}</span></p>
+              <p style={{ fontWeight: "bold" }}>Date: <span style={{ fontWeight: "400" }}>{holiday.date}</span></p>
+              <p style={{ fontWeight: "bold" }}>Description: <span style={{ fontWeight: "400" }}>{holiday.description}</span></p>
             </li>
           ))}
         </ul>
       </div>
-    </div>
+      <HolidayForm />
+    </main>
   )
 }
 
 export default HolidayUI
-
-

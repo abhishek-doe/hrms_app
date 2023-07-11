@@ -131,19 +131,25 @@
   display: flex;
   border-bottom: 1px solid #999999;
 }
-.dashboard .occasion li {
+.dashboard .occasion .tags {
   list-style-type: none;
   font-size: 1rem;
   border-bottom: 5px solid #ffffff;
   border-left: 3px solid #ffffff;
   border-right: 3px solid #ffffff;
-  padding: 1rem 13px;
+  padding: 1rem 0;
+  cursor: pointer;
+  padding-left: 5px;
+  flex: 1;
 }
-.dashboard .occasion li:hover {
+.dashboard .occasion .tags-active {
   border-bottom: 5px solid #708ccb;
   border-left: 3px solid #e7e7e7;
   border-right: 3px solid #e8e8e8;
+  padding: 1rem 0;
+  padding-left: 5px;
   cursor: pointer;
+  flex: 1;
 }
 .dashboard .occasion {
   height: 24rem;
@@ -188,13 +194,18 @@
   width: 5rem;
   font-size: 0.7rem;
   background: #437ceb;
-  border: 1px solid gray;
+  border: 1px solid rgb(187, 187, 187);
   color: white;
   border-radius: 3px;
 }
-.dashboard .monthly-btn:hover {
+.dashboard .monthly-btn-active {
+  padding: 5px;
+  width: 5rem;
+  font-size: 0.7rem;
   background: white;
   color: black;
+  border-radius: 3px;
+  border: 1px solid #eee;
 }
 .dashboard .yearly-btn {
   padding: 5px;
@@ -213,23 +224,16 @@
   margin-left: 1rem;
   width: 159px;
   font-size: 0.7rem;
-  padding: 2px;
+  padding: 2px 4px;
   color: #727272;
   border-radius: 5px;
-  border: none;
+  border: 1px solid black;
 }
 @media screen and (max-width: 1300px) {
-  .dashboard .row-1 {
-    grid-template-columns: repeat(3, 1fr);
-  }
-}
-
-@media screen and (max-width: 1000px) {
   .dashboard .row-1 {
     grid-template-columns: repeat(2, 1fr);
   }
 }
-
 @media screen and (max-width: 1130px) {
   .dashboard .row-2 {
     grid-template-columns: repeat(2, 1fr);
@@ -246,5 +250,16 @@
   .dashboard .occasion {
     margin-left: 0rem;
     margin-top: 2rem;
+  }
+}
+
+@media screen and (max-width: 425px) {
+  .dashboard .row-2 {
+    grid-template-columns: repeat(1, 1fr);
+    margin-left: 5rem;
+  }
+  .dashboard .row-1 {
+    margin-left: 5rem;
+    grid-template-columns: repeat(1, 1fr);
   }
 }

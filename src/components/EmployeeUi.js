@@ -12,6 +12,7 @@ const EmployeeUi = () => {
         axios.get("https://hrms-shadowwalker1025.vercel.app/api/employees")
             .then(res => setData(res.data))
     }, [])
+
     const employeeuiElement = data.filter(item => {
         return item.fullName.toLowerCase() == "" ? item : item.fullName.toLowerCase().includes(search)
     }).map((data, i) => {

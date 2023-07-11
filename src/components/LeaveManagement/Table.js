@@ -121,7 +121,7 @@ export const lHistoryData = [
       applied: "24-dec-2020",
       days: "2",
       status: "Cancelled",
-      color: "#ff9696",
+      color: "#ff000098",
     },
     {
       id: 3,
@@ -137,7 +137,7 @@ export const lHistoryData = [
       applied: "24-dec-2020",
       days: "2",
       status: "Cancelled",
-      color: "#ff9696",
+      color: "#ff000098",
     },
     {
       id: 5,

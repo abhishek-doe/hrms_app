@@ -72,7 +72,7 @@ const EssLeave = () => {
             <p style={{ fontWeight: "bold", color: "#666666" }}>
               Applied On: <span style={{ fontWeight: "400", color: "#999999" }}>{data.applied}</span>
             </p>
-            <p style={{ color: `${data.color}` }}>{data.status}</p>
+            <p style={{ color: `${data.color}`, fontWeight: "bold" }}>{data.status}</p>
           </div>
           <div style={{ display: "flex", flexDirection: "column", alignItems: "center" }}>
             <p style={{ color: "#666666", display: "flex", alignItems: "center", fontSize: ".9rem" }}>
@@ -125,7 +125,9 @@ const EssLeave = () => {
                 <div className="calender-div">
                   <label htmlFor="calender">Leave Calander</label>
                   <select id="calender" className="calender-select">
-                    <option>Leave Calander(01, Jan, 2022)</option>
+                    <option>
+                      Leave Calander(01, Jan, 2022)
+                      </option>
                     <option>Leave Calander(01, Jan, 2022)</option>
                     <option>Leave Calander(01, Jan, 2022)</option>
                   </select>

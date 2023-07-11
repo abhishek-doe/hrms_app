@@ -1,7 +1,6 @@
 import { Route, Routes } from 'react-router-dom';
 import './App.css';
 import EmployeeForm from './components/EmployeeForm';
-import Holiday from "./components/HolidayForm"
 import HolidayUI from './components/HolidayUI';
 import Navbar from "./components/Navbar"
 import Footer from "./components/Footer"
@@ -38,7 +37,6 @@ function App() {
         {/* <Route element={<ProtectedRoutes />}> */}
           <Route path="/" exact element={<Dashboard />} />
           <Route path="/employeeform" exact element={<EmployeeForm />} />
-          <Route path='/holiday' exact element={<Holiday />} />
           <Route path='/holidayui' exact element={<HolidayUI />} />
           <Route path='/dashboard' exact element={<Dashboard />} />
           <Route path='/taskboard' exact element={<TaskBoard />} />

@@ -41,9 +41,9 @@ const HolidayForm = () => {
 
   };
 
-useEffect(() => {
-  console.log(data)
-}, [data])
+  useEffect(() => {
+    console.log(data)
+  }, [data])
 
   return (
     <form className="holiday-form" onSubmit={handleSubmit}>
@@ -80,7 +80,7 @@ useEffect(() => {
 };
 
 const HolidaysPage = () => {
-  
+
   return (
     <div>
       <div className="holidays-page">
