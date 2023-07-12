@@ -73,6 +73,9 @@ const Navbar = () => {
             <Link className="sidemenu-link" to="/healthhistory">
               <li>Health History</li>
             </Link>
+            <Link className="sidemenu-link" to="/essleave">
+              <li>Leave Management</li>
+            </Link>
             <Link className="sidemenu-link" to="/dashboard">
               <li>Help & Support</li>
             </Link>
