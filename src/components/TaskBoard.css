@@ -11,7 +11,7 @@
 }
 
 .dashboard-2 .container{
-    margin: 1rem;
+    margin: 3rem 1rem;
     display: grid;
     grid-template-columns: repeat(3, 0fr);
 }
@@ -19,7 +19,7 @@
     margin: 0 2rem;
 }
 .dashboard-2 .pop-ups-div{
-    height: 7rem;
+    height: 5rem;
     padding: 2rem;
     color: white;
     width: 20rem;
@@ -31,7 +31,7 @@
     align-items: center;
 }
 .dashboard-2 .pop-ups{
-    height: 4rem;
+    height: 3rem;
     width: 6rem;
     min-width: 4rem;
     border: 3px solid white;
@@ -85,7 +85,7 @@
     align-items: center;
     gap: 1rem;
     width: 20rem;
-    padding: 1rem;
+    padding: 10px;
 }
 .dashboard-2 .vl{
     height: 4rem;
@@ -99,7 +99,7 @@
     width: 24rem;
 }
 .dashboard-2 .duty-requests{
-    height: 22rem;
+    height: 21rem;
     margin-top: 1rem;
     width: 24rem;
     display: flex;
@@ -178,7 +178,7 @@
     border: 1px solid #575757;
 }
 .dashboard-2 .taskBoardData-div{
-    max-height: 22rem;
+    max-height: 20.5rem;
     padding: 1rem;
     overflow-y: scroll;
     border: 1px solid rgb(207, 207, 207);

@@ -125,7 +125,14 @@ const PersonalDetailPage = () => {
               {data?.name} <br /> {data?.gender} <br /> {data?.relation} <br /> D.O.B: {data?.dob}
             </p>
           </div>
+          <div className="dotsmenu-div">
           <HiOutlineDotsVertical />
+          <div className="dotsmenu">
+                    <p>Edit</p>
+                    <hr />
+                    <p>Delete</p>
+                  </div>
+          </div>
         </div>
       );
     });
@@ -193,7 +200,14 @@ const PersonalDetailPage = () => {
               <div style={{ background: "#eeeeee", margin: "1rem 0.6rem", padding: "0.6rem 1.2rem" }}>
                 <div style={{ display: "flex", gap: "15.1rem", marginBottom: "6px" }}>
                   <h4>Temporary Address</h4>
-                  <HiOutlineDotsVertical style={{ marginTop: "2px", fontSize: "1.3rem" }} />
+                  <div className="dotsmenu-div">
+                  <HiOutlineDotsVertical style={{ marginTop: "2px", fontSize: "1.3rem", cursor: "pointer" }} />
+                  <div className="dotsmenu">
+                    <p>Edit</p>
+                    <hr />
+                    <p>Delete</p>
+                  </div>
+                  </div>
                 </div>
                 <hr />
                 <br />

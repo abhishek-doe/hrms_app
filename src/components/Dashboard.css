@@ -17,14 +17,15 @@
 }
 .dashboard .profile {
   /* margin: 0rem 2rem; */
-  padding: 1rem;
+  padding: 10px;
   height: 6rem;
-  width: 17rem;
+  width: 15rem;
   box-shadow: rgb(0 0 0 / 10%) 0px 4px 20px;
   border-radius: 10px;
   justify-content: center;
+  align-items: center;
   display: flex;
-  gap: 1rem;
+  gap: 10px;
   color: #505050;
 }
 .dashboard .user-image {
@@ -33,14 +34,13 @@
 }
 .dashboard .lastsignin {
   height: 6rem;
-  width: 16rem;
+  width: 15rem;
   box-shadow: rgb(0 0 0 / 10%) 0px 4px 20px;
   border-radius: 10px;
-  padding: 1rem;
-  font-size: 1.1rem;
+  padding: 10px;
   display: flex;
   flex-direction: row;
-  justify-items: center;
+  justify-content: center;
   align-items: center;
   gap: 2rem;
   color: #464646;
@@ -56,25 +56,24 @@
   width: 16rem;
   box-shadow: rgb(0 0 0 / 10%) 0px 4px 20px;
   border-radius: 10px;
-  padding: 1rem 1.3rem;
-  font-size: 1.1rem;
+  padding: 10px 0;
   display: flex;
   flex-direction: row;
-  justify-items: center;
+  justify-content: center;
   align-items: center;
   color: #444444;
   gap: 2rem;
 }
 .dashboard .shifts {
   height: 6rem;
-  width: 16rem;
+  width: 15rem;
   box-shadow: rgb(0 0 0 / 10%) 0px 4px 20px;
   border-radius: 10px;
-  padding: 1rem;
+  padding: 10px;
   font-size: 1.1rem;
   display: flex;
   flex-direction: row;
-  justify-items: center;
+  justify-content: center;
   align-items: center;
   color: #3c3c3c;
   gap: 2rem;
@@ -86,7 +85,7 @@
 }
 .dashboard .row-2 .holidays {
   height: 20rem;
-  width: 20rem;
+  width: 19rem;
   box-shadow: rgb(0 0 0/ 10%) 0px 4px 20px;
   border-radius: 10px;
   padding: 2rem;
@@ -153,7 +152,7 @@
 }
 .dashboard .occasion {
   height: 24rem;
-  width: 24rem;
+  width: 23rem;
   box-shadow: rgb(0 0 0/ 10%) 0px 4px 20px;
   border: 3px solid #eee;
   /* padding: 2rem; */
@@ -184,7 +183,7 @@
   border: 1px solid rgb(216, 216, 216);
   padding: 1rem;
   box-shadow: rgb(0 0 0/10%) 0px 4px 20px;
-  width: 22.5rem;
+  width: 21.5rem;
   height: 22rem;
   border-radius: 10px;
   border-top: 8px solid #57a645;
@@ -206,6 +205,7 @@
   color: black;
   border-radius: 3px;
   border: 1px solid #eee;
+  margin-left: 13px;
 }
 .dashboard .yearly-btn {
   padding: 5px;
@@ -222,19 +222,17 @@
 }
 .dashboard .present-inp {
   margin-left: 1rem;
-  width: 159px;
+  width: 120px;
   font-size: 0.7rem;
   padding: 2px 4px;
   color: #727272;
   border-radius: 5px;
   border: 1px solid black;
 }
-@media screen and (max-width: 1300px) {
+@media screen and (max-width: 1024px) {
   .dashboard .row-1 {
     grid-template-columns: repeat(2, 1fr);
   }
-}
-@media screen and (max-width: 1130px) {
   .dashboard .row-2 {
     grid-template-columns: repeat(2, 1fr);
   }

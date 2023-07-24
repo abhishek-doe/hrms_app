@@ -33,10 +33,10 @@
   padding: 10px 1.2rem;
   border: 1px solid #d4d4d4;
   border-radius: 5px;
-  width: 32.9rem;
+  width: 30.9rem;
 }
 .professionalDetail .info-ele {
-  width: 35.3rem;
+  width: 33.3rem;
   border: 1px solid #dadada;
   box-shadow: rgb(0 0 0/15%) 0px 4px 10px;
   height: 23.5rem;
@@ -48,20 +48,12 @@
   margin: 1rem;
 }
 
-.professionalDetail .col-2 .education-info .pInfo-tag {
+.professionalDetail .col-2 .education-info .pInfo-tag, .prevEmploy-info .pInfo-tag {
   display: flex;
   padding: 10px 1.2rem;
   border: 1px solid #d4d4d4;
   border-radius: 5px;
-  width: 33rem;
-  margin-top: 1rem;
-}
-.professionalDetail .col-2 .prevEmploy-info .pInfo-tag {
-  display: flex;
-  padding: 10px 1.2rem;
-  border: 1px solid #d4d4d4;
-  border-radius: 5px;
-  width: 33rem;
+  width: 31rem;
   margin-top: 1rem;
 }
 .professionalDetail .col-2 .education-head{

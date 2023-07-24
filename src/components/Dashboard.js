@@ -57,47 +57,22 @@ const Dashboard = () => {
       <div className="container">
         <div className="row-1">
           <div className="profile">
-            <div className='width: "40%"'>
               <BsPersonCircle className="user-image" />
-            </div>
-            <div style={{ width: "60%", maxHeight: "7rem", overflowY: "scroll" }}>
-              <i>Welcome</i>
-              <br />
-              <i style={{ color: "#4b81ac", wordWrap: "break-word" }}>Abhishek Yadav</i>
-              <br />
-              &nbsp;&nbsp;&nbsp;&nbsp;
-              <BsEmojiSmile style={{ color: "#444444", fontSize: "25px" }} />
-            </div>
+              <p style={{ wordWrap: "break-word" }}>Welcome<br /><span style={{ color: "#4b81ac", fontWeight: "600"}}>Abhishek Yadav</span></p>
           </div>
-
           <div className="lastsignin">
-            <div>
-              <p>Your Last Sign in</p>
-              <p style={{ color: "#7BC46C" }}>1 day(s) ago</p>
-            </div>
+              <p>Your Last Sign in<br /><span style={{ color: "#7BC46C" }}>1 day(s) ago</span></p>
             <AiOutlineWifi style={{ fontSize: "2.5rem", color: "#444444" }} />
           </div>
 
           <div className="teamsize">
-            <div>
-              <p>My Team Size</p>
-              <p style={{ color: "#d55340" }}>7</p>
-            </div>
-            <span>
+              <p style={{display: "flex", flexDirection: "column", alignItems: "center"}}>My Team Size<br /><span style={{ color: "#d55340", fontWeight: "bolder", fontSize: "1.1rem" }}>7</span></p>
               <IoIosPeople style={{ fontSize: "3rem", color: "#444444" }} />
-            </span>
           </div>
 
           <div className="shifts">
-            <div>
-              <p style={{ fontSize: "1rem" }}>General Shift</p>
-              <p style={{ fontSize: "0.8rem", marginBottom: "5px" }}>(09:03:00 to 17:30:00)</p>
-              <p style={{ fontSize: "0.8rem" }}>First Punch: N/A</p>
-              <p style={{ fontSize: "0.8rem" }}>Last Punch: N/A</p>
-            </div>
-            <span>
+              <p style={{ fontSize: ".8rem" }}>General Shift<br />(09:03:00 to 17:30:00)<br />First Punch: N/A<br />Last Punch: N/A</p>
               <BiTimeFive style={{ fontSize: "2rem", color: "#444444" }} />
-            </span>
           </div>
         </div>
 

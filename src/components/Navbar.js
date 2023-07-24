@@ -1,14 +1,30 @@
-import React, { useState } from "react";
+import React, { useState, useRef } from "react";
 import "./Navbar.css";
 import { Link } from "react-router-dom";
 import { AiOutlineMenu } from "react-icons/ai";
 import { FaTimes, FaUserCircle } from "react-icons/fa";
 import gtmlogo1 from "../images/gtmlogo1.png";
 import { useSelector } from "react-redux";
+import { useEffect } from "react";
 
 const Navbar = () => {
   const [isSideMenu, setIsSideMenu] = useState(false);
   const isAuth = useSelector((state) => state.login.isAuth);
+
+  let menuRef = useRef()
+  useEffect(() => {
+    let handler = (e) => {
+      if (!menuRef.current.contains(e.target)) {
+        setIsSideMenu(false)
+        console.log(menuRef.current)
+      }
+    }
+    document.addEventListener("mousedown", handler)
+
+    return () => {
+      document.removeEventListener("mousedown", handler)
+    }
+  })
 
   return (
     <div className="navbar">
@@ -17,12 +33,12 @@ const Navbar = () => {
           {isSideMenu ? (
             <FaTimes
               style={{ border: "1px solid black", borderRadius: "5px", fontSize: "25px", marginLeft: "20px", padding: "5px", fontSize: "20px", cursor: "pointer" }}
-              onClick={() => setIsSideMenu((prev) => !prev)}
+              onClick={() => setIsSideMenu(!isSideMenu)}
             />
           ) : (
             <AiOutlineMenu
               style={{ border: "1px solid black", borderRadius: "5px", padding: "5px", fontSize: "20px", marginLeft: "20px", cursor: "pointer" }}
-              onClick={() => setIsSideMenu((prev) => !prev)}
+              onClick={() => setIsSideMenu(!isSideMenu)}
             />
           )}
           <Link to="/">
@@ -31,57 +47,54 @@ const Navbar = () => {
         </div>
         <ul className="navbar-ul">
           {/* {isAuth && ( */}
-            <>
-              <Link to="/employeeui">
-                <li>Employees</li>
-              </Link>
-              <Link to="holidayui">
-                <li>&nbsp;Holidays</li>
-              </Link>
-            </>
+          <>
+            <Link to="/employeeui">
+              <li>Employees</li>
+            </Link>
+            <Link to="holidayui">
+              <li>&nbsp;Holidays</li>
+            </Link>
+          </>
           {/* )} */}
           {/* {isAuth ? ( */}
-            {/* <FaUserCircle /> */}
+          {/* <FaUserCircle /> */}
           {/* ) : ( */}
-            <Link to="login">
-              <li>Login</li>
-            </Link>
+          <Link to="login">
+            <li>Login</li>
+          </Link>
           {/* )} */}
         </ul>
       </div>
       {/* {isAuth && ( */}
-        <div className={isSideMenu ? "side-menu_active" : "side-menu"}>
-          <ul className="side-menu-list-div">
-            <Link className="sidemenu-link" to="/">
-              <li>Dashboard</li>
-            </Link>
-            <Link className="sidemenu-link" to="/taskboard">
-              <li>Task Board</li>
-            </Link>
-            <Link className="sidemenu-link" to="/personaldetail">
-              <li>Personal Details</li>
-            </Link>
-            <Link className="sidemenu-link" to="/professionaldetail">
-              <li>Professional Details</li>
-            </Link>
-            <Link className="sidemenu-link" to="/jobdetail">
-              <li>Job Details</li>
-            </Link>
-            <Link className="sidemenu-link" to="/documentdetail">
-              <li>Document Details</li>
-            </Link>
-            <Link className="sidemenu-link" to="/healthhistory">
-              <li>Health History</li>
-            </Link>
-            <Link className="sidemenu-link" to="/essleave">
-              <li>Leave Management</li>
-            </Link>
-            <Link className="sidemenu-link" to="/dashboard">
-              <li>Help & Support</li>
-            </Link>
-          </ul>
-        </div>
-       {/* )} */}
+      <div ref={menuRef} className={isSideMenu ? "side-menu_active" : "side-menu"}>
+        <ul className="side-menu-list-div">
+          <Link className="sidemenu-link" to="/dashboard">
+            <li>Dashboard</li>
+          </Link>
+          <Link className="sidemenu-link" to="/taskboard">
+            <li>Task Board</li>
+          </Link>
+          <Link className="sidemenu-link" to="/professionaldetail">
+            <li>Professional Details</li>
+          </Link>
+          <Link className="sidemenu-link" to="/jobdetail">
+            <li>Job Details</li>
+          </Link>
+          <Link className="sidemenu-link" to="/documentdetail">
+            <li>Document Details</li>
+          </Link>
+          <Link className="sidemenu-link" to="/healthhistory">
+            <li>Health History</li>
+          </Link>
+          <Link className="sidemenu-link" to="/essleave">
+            <li>Leave Management</li>
+          </Link>
+          <Link className="sidemenu-link" to="/dashboard">
+            <li>Help & Support</li>
+          </Link>
+        </ul>
+      </div>
+      {/* )} */}
     </div>
   );
 };

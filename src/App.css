@@ -33,5 +33,28 @@ input[type="number"]::-webkit-outer-spin-button {
   border-radius: 10px;
 }
 li{
+  cursor: pointer;
   list-style-type: none;
+}
+.dotsmenu-div{
+  position: relative;
+}
+.dotsmenu{
+display: none;
+}
+.dotsmenu-div:hover .dotsmenu{
+  position: absolute;
+  right: 1rem;
+  top: 4px;
+  display: flex;
+  flex-direction: column;
+  border-radius: 10px;
+  width: 4rem;
+  background-color: white;
+  padding: 7px 10px;
+  font-size: .9rem;
+  border: #5095c0 1px solid;
+}
+.dotsmenu-div:hover .dotsmenu p{
+  cursor: pointer;
 }

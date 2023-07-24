@@ -22,7 +22,15 @@ const ProfessionalDetail = () => {
         <>
           <div>
             <div style={{ display: "flex", color: "#575757", padding: "3px 2rem", marginTop: "10px" }}>
-              <p style={{ flex: "1" }}>{data.field}</p> <BsThreeDotsVertical style={{ color: "black", cursor: "pointer" }} />
+              <p style={{ flex: "1" }}>{data.field}</p>
+              <div className="dotsmenu-div">
+                <BsThreeDotsVertical style={{ color: "black", cursor: "pointer" }} />
+                <div className="dotsmenu">
+                  <p>Edit</p>
+                  <hr />
+                  <p>Delete</p>
+                </div>
+              </div>
             </div>
             <div style={{ display: "flex", color: "#575757", padding: "7px 2rem", marginBottom: "10px" }}>
               <p style={{ flex: "1" }}>
@@ -45,7 +53,15 @@ const ProfessionalDetail = () => {
         <>
           <div>
             <div style={{ display: "flex", color: "#575757", padding: "3px 2rem", marginTop: "10px" }}>
-              <p style={{ flex: "10%" }}>{data.language}</p> <BsThreeDotsVertical style={{ color: "black", cursor: "pointer" }} />
+              <p style={{ flex: "10%" }}>{data.language}</p>
+               <div className="dotsmenu-div">
+                <BsThreeDotsVertical style={{ color: "black", cursor: "pointer" }} />
+                <div className="dotsmenu">
+                  <p>Edit</p>
+                  <hr />
+                  <p>Delete</p>
+                </div>
+              </div>
             </div>
             <div style={{ display: "flex", color: "#575757", padding: "7px 2rem", marginBottom: "10px" }}>
               <p style={{ flex: "1" }}>
@@ -72,7 +88,14 @@ const ProfessionalDetail = () => {
                 {data.company}
                 <span style={{ color: "#0e94db" }}>`({data.role})`</span>
               </p>{" "}
-              <BsThreeDotsVertical style={{ color: "black", cursor: "pointer" }} />
+              <div className="dotsmenu-div">
+                <BsThreeDotsVertical style={{ color: "black", cursor: "pointer" }} />
+                <div className="dotsmenu">
+                  <p>Edit</p>
+                  <hr />
+                  <p>Delete</p>
+                </div>
+              </div>
             </div>
             <div style={{ display: "flex", color: "#575757", padding: "7px 2rem", marginBottom: "10px" }}>
               <p style={{ flex: "1" }}>

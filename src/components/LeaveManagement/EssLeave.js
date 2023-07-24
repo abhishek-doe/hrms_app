@@ -77,9 +77,14 @@ const EssLeave = () => {
           <div style={{ display: "flex", flexDirection: "column", alignItems: "center" }}>
             <p style={{ color: "#666666", display: "flex", alignItems: "center", fontSize: ".9rem" }}>
               {earnedL}
-              <span>
+                <div className="dotsmenu-div">
                 <BiDotsVertical style={{ fontSize: "1.3rem" }} />
-              </span>
+                  <div className="dotsmenu">
+                    <p>Edit</p>
+                    <hr />
+                    <p>Delete</p>
+                  </div>
+                  </div>
             </p>
             <p style={{ color: "#666666", fontSize: ".9rem" }}>{data.days} Day(s)</p>
           </div>

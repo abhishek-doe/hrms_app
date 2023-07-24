@@ -10,7 +10,7 @@ const AddAddressD = () => {
     <main className="addAddressD">
             <div className="heading-div">
                 <h2 style={{ fontWeight: "100" }}>Add Address Details</h2>
-                <FaTimes style={{ fontSize: "1.4rem", cursor: "pointer" }} onClick={() => navigate("/personaldetail")} />
+                <FaTimes style={{ fontSize: "1.4rem", cursor: "pointer" }} onClick={() => navigate("/")} />
             </div>
             <form className="detailFields">
                 <div className="form-div">
