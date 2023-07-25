@@ -7,8 +7,8 @@ import gtmlogo1 from "../images/gtmlogo1.png";
 import { useSelector } from "react-redux";
 import { useEffect } from "react";
 
-const Navbar = () => {
-  const [isSideMenu, setIsSideMenu] = useState(false);
+const Navbar = (props) => {
+  const {isSideMenu, setIsSideMenu} = props
   const isAuth = useSelector((state) => state.login.isAuth);
 
   let menuRef = useRef()
@@ -29,20 +29,14 @@ const Navbar = () => {
   return (
     <div className="navbar">
       <div className="container">
-        <div style={{ display: "flex", alignItems: "center", gap: "2rem", flex: "1" }}>
-          {isSideMenu ? (
-            <FaTimes
-              style={{ border: "1px solid black", borderRadius: "5px", fontSize: "25px", marginLeft: "20px", padding: "5px", fontSize: "20px", cursor: "pointer" }}
-              onClick={() => setIsSideMenu(!isSideMenu)}
-            />
-          ) : (
+        <div style={{ display: "flex", alignItems: "center", gap: "2rem", flex: "1", }}>
             <AiOutlineMenu
               style={{ border: "1px solid black", borderRadius: "5px", padding: "5px", fontSize: "20px", marginLeft: "20px", cursor: "pointer" }}
               onClick={() => setIsSideMenu(!isSideMenu)}
             />
-          )}
+          
           <Link to="/">
-            <img src={gtmlogo1} alt="G.T.M." style={{ height: "80px", borderRadius: "50%" }} className="gtm-logo" />
+            <img src={gtmlogo1} alt="G.T.M." style={{ height: "60px", borderRadius: "30%" }} className="gtm-logo" />
           </Link>
         </div>
         <ul className="navbar-ul">
@@ -68,6 +62,15 @@ const Navbar = () => {
       {/* {isAuth && ( */}
       <div ref={menuRef} className={isSideMenu ? "side-menu_active" : "side-menu"}>
         <ul className="side-menu-list-div">
+        <div className="menu-logo-div">
+          <Link to="/" style={{flex: "1"}}>
+            <img src={gtmlogo1} alt="G.T.M." style={{ height: "60px", borderRadius: "30%" }} className="gtm-logo" />
+          </Link>
+          <FaTimes
+            style={{ border: "1px solid black", borderRadius: "5px", fontSize: "25px", marginLeft: "20px", padding: "5px", fontSize: "20px", cursor: "pointer" }}
+            onClick={() => setIsSideMenu(!isSideMenu)}
+          />
+        </div>
           <Link className="sidemenu-link" to="/dashboard">
             <li>Dashboard</li>
           </Link>

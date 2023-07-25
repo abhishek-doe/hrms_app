@@ -54,7 +54,7 @@
 
 .personalDetail .info-ele{
   max-height: 16.8rem;
-  border-radius: 5px;
+  border-radius: 0 0 5px 5px;
   width: 30rem;
   overflow-y: scroll;
   border: 2px solid #d4d4d4;
@@ -63,7 +63,7 @@
 
 .personalDetail .address-info{
   height: 16.8rem;
-  border-radius: 5px;
+  border-radius: 0 0 5px 5px;
   width: 30rem;
   border: 2px solid #d4d4d4;
   box-shadow: rgb(0 0 0/ 15%) 0px 4px 10px;
@@ -89,7 +89,7 @@
   gap: 11rem;
   padding: 10px 1.2rem;
   border: 1px solid #d4d4d4;
-  border-radius: 5px; 
+  border-radius: 5px 5px 0 0; 
   width: 27.7rem;
 }
 .personalDetail .address-tag{
@@ -97,7 +97,7 @@
   gap: 13.9rem;
   padding: 10px 1.2rem;
   border: 1px solid #d4d4d4;
-  border-radius: 5px; 
+  border-radius: 5px 5px 0 0; 
   width: 27.7rem;
 }
 .personalDetail .dependent-tag{
@@ -105,8 +105,8 @@
   gap: 2rem;
   padding: 10px 1.2rem;
   border: 1px solid #d4d4d4;
-  border-radius: 5px; 
-  width: 17rem;
+  border-radius: 5px 5px 0 0; 
+  width: 17.1rem;
 }
 @media screen and (max-width: 1024px) {
   .personalDetail .col-2{
