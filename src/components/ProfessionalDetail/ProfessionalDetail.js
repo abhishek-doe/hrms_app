@@ -2,11 +2,18 @@ import React, { useState } from "react";
 import "./ProfessionalDetail.css";
 import { BsThreeDotsVertical } from "react-icons/bs";
 import { MdOutlineCastForEducation } from "react-icons/md";
-import { useNavigate } from "react-router-dom";
+import UpdateSkill from "./UpdateSkill"
+import UpdateLanguage from "./UpdateLanguage"
+import UpdateQualification from "./UpdateQualification"
+import UpdateEmployment from "./UpdateEmployment"
+
 
 const ProfessionalDetail = () => {
   const [accordion, setAccordion] = useState(null);
-  const navigate = useNavigate();
+  const [skillmodal, setSkillmodal] = useState(false)
+  const [lgmodal, setLgmodal] = useState(false)
+  const [qualmodal, setQualmodal] = useState(false)
+  const [prevmodal, setPrevmodal] = useState(false)
 
   const toggleAccordion = (i) => {
     if (accordion === i) {
@@ -15,11 +22,17 @@ const ProfessionalDetail = () => {
     setAccordion(i);
   };
 
+  if (skillmodal || lgmodal || qualmodal || prevmodal) {
+    document.body.classList.add('active-modal')
+  } else {
+    document.body.classList.remove('active-modal')
+  }
+  
   const skillElement =
     skillData &&
     skillData.map((data) => {
       return (
-        <>
+        <div key={data.id}>
           <div>
             <div style={{ display: "flex", color: "#575757", padding: "3px 2rem", marginTop: "10px" }}>
               <p style={{ flex: "1" }}>{data.field}</p>
@@ -42,7 +55,7 @@ const ProfessionalDetail = () => {
             </div>
           </div>
           <hr />
-        </>
+        </div>
       );
     });
 
@@ -50,11 +63,11 @@ const ProfessionalDetail = () => {
     languageData &&
     languageData.map((data) => {
       return (
-        <>
+        <div key={data.id}>
           <div>
             <div style={{ display: "flex", color: "#575757", padding: "3px 2rem", marginTop: "10px" }}>
               <p style={{ flex: "10%" }}>{data.language}</p>
-               <div className="dotsmenu-div">
+              <div className="dotsmenu-div">
                 <BsThreeDotsVertical style={{ color: "black", cursor: "pointer" }} />
                 <div className="dotsmenu">
                   <p>Edit</p>
@@ -73,7 +86,7 @@ const ProfessionalDetail = () => {
             </div>
           </div>
           <hr />
-        </>
+        </div>
       );
     });
 
@@ -81,33 +94,31 @@ const ProfessionalDetail = () => {
     prevEmployData &&
     prevEmployData.map((data) => {
       return (
-        <>
-          <div>
-            <div style={{ display: "flex", color: "#575757", padding: "3px 2rem", marginTop: "10px" }}>
-              <p style={{ flex: "10%" }}>
-                {data.company}
-                <span style={{ color: "#0e94db" }}>`({data.role})`</span>
-              </p>{" "}
-              <div className="dotsmenu-div">
-                <BsThreeDotsVertical style={{ color: "black", cursor: "pointer" }} />
-                <div className="dotsmenu">
-                  <p>Edit</p>
-                  <hr />
-                  <p>Delete</p>
-                </div>
+        <div key={data.id}>
+          <div style={{ display: "flex", color: "#575757", padding: "3px 2rem", marginTop: "10px" }} >
+            <p style={{ flex: "10%" }}>
+              {data.company}
+              <span style={{ color: "#0e94db" }}>`({data.role})`</span>
+            </p>{" "}
+            <div className="dotsmenu-div">
+              <BsThreeDotsVertical style={{ color: "black", cursor: "pointer" }} />
+              <div className="dotsmenu">
+                <p>Edit</p>
+                <hr />
+                <p>Delete</p>
               </div>
             </div>
-            <div style={{ display: "flex", color: "#575757", padding: "7px 2rem", marginBottom: "10px" }}>
-              <p style={{ flex: "1" }}>
-                From data: <span style={{ color: "#999999" }}> {data.from}</span>
-              </p>{" "}
-              <p>
-                To Date: <span style={{ color: "#999999" }}>{data.to}</span>
-              </p>{" "}
-            </div>
+          </div>
+          <div style={{ display: "flex", color: "#575757", padding: "7px 2rem", marginBottom: "10px" }}>
+            <p style={{ flex: "1" }}>
+              From data: <span style={{ color: "#999999" }}> {data.from}</span>
+            </p>{" "}
+            <p>
+              To Date: <span style={{ color: "#999999" }}>{data.to}</span>
+            </p>{" "}
           </div>
           <hr />
-        </>
+        </div>
       );
     });
 
@@ -115,8 +126,8 @@ const ProfessionalDetail = () => {
     educationData &&
     educationData.map((data, i) => {
       return (
-        <>
-          <div className="education-head" onClick={() => toggleAccordion(i)}>
+        <div key={data.id}>
+          <div className="education-head" onClick={() => toggleAccordion(i)} >
             <MdOutlineCastForEducation style={{ color: "#0e82cf", fontSize: "1.5rem" }} />
             <h4 style={{ flex: "1" }}>{data.course}</h4>
             <h2 style={{ cursor: "pointer" }}>{accordion === i ? "-" : "+"}</h2>
@@ -129,7 +140,7 @@ const ProfessionalDetail = () => {
             <button style={{ padding: "5px", width: "5rem", border: "1px solid red", background: "white", borderRadius: "25px 0 0 25px", marginLeft: "21rem", marginBottom: "1rem" }}>Edit</button>
             <button style={{ padding: "5px", width: "5rem", border: "1px solid blue", borderLeft: "none", background: "white", borderRadius: "0 25px 25px 0" }}>Delete</button>
           </div>
-        </>
+        </div>
       );
     });
 
@@ -141,26 +152,47 @@ const ProfessionalDetail = () => {
             <div className="pInfo-tag">
               <h3 style={{ color: "#0e82cf", flex: "1" }}>Skill Details</h3>
               <div style={{ display: "flex", gap: "1rem", alignItems: "center" }}>
-                <button className="edit-info" onClick={() => navigate("/updateskill")}>
+                <button className="edit-info" onClick={() => setSkillmodal(!skillmodal)}>
                   Add More
                 </button>
                 <h2 style={{ color: "#477bf4", cursor: "pointer" }}>-</h2>
               </div>
             </div>
             <div className="info-ele">{skillElement}</div>
+            {
+              skillmodal && (
+                <div className="modal">
+                  <div className="overlay"></div>
+                  <div className="modal-content">
+                    <UpdateSkill setModal={setSkillmodal} />
+                  </div>
+                </div>
+              )
+            }
           </div>
+
 
           <div className="language-info">
             <div className="pInfo-tag">
               <h3 style={{ color: "#0e82cf", flex: "1" }}>Language Details</h3>
               <div style={{ display: "flex", gap: "1rem", alignItems: "center" }}>
-                <button className="edit-info" onClick={() => navigate("/updatelanguage")}>
+                <button className="edit-info" onClick={() => setLgmodal(!lgmodal)}>
                   Add More
                 </button>
                 <h2 style={{ color: "#477bf4", cursor: "pointer" }}>-</h2>
               </div>
             </div>
             <div className="info-ele">{languageElement}</div>
+            {
+              lgmodal && (
+                <div className="modal">
+                  <div className="overlay"></div>
+                  <div className="modal-content">
+                    <UpdateLanguage setModal={setLgmodal} />
+                  </div>
+                </div>
+              )
+            }
           </div>
         </section>
 
@@ -169,25 +201,45 @@ const ProfessionalDetail = () => {
             <div className="pInfo-tag">
               <h3 style={{ color: "#0e82cf", flex: "30%" }}>Qualification Details</h3>
               <div style={{ display: "flex", gap: "1rem", alignItems: "center" }}>
-                <button className="edit-info" onClick={() => navigate("/updatequalification")}>
+                <button className="edit-info" onClick={() => setQualmodal(!qualmodal)}>
                   Add More
                 </button>
                 <h2 style={{ color: "#477bf4", cursor: "pointer" }}>-</h2>
               </div>
             </div>
             <div className="info-ele">{educationElement}</div>
+            {
+              qualmodal && (
+                <div className="modal">
+                  <div className="overlay"></div>
+                  <div className="modal-content">
+                    <UpdateQualification setModal={setQualmodal} />
+                  </div>
+                </div>
+              )
+            }
           </div>
           <div className="prevEmploy-info">
             <div className="pInfo-tag">
               <h3 style={{ color: "#0e82cf", flex: "1" }}>Previous Employment Details</h3>
               <div style={{ display: "flex", gap: "1rem", alignItems: "center" }}>
-                <button className="edit-info" onClick={() => navigate("/updateemployment")}>
+                <button className="edit-info" onClick={() => setPrevmodal(!prevmodal)}>
                   Add More
                 </button>
                 <h2 style={{ color: "#477bf4", cursor: "pointer" }}>-</h2>
               </div>
             </div>
             <div className="info-ele">{prevEmployElement}</div>
+            {
+              prevmodal && (
+                <div className="modal">
+                  <div className="overlay"></div>
+                  <div className="modal-content">
+                    <UpdateEmployment setModal={setPrevmodal}/>
+                  </div>
+                </div>
+              )
+            }
           </div>
         </section>
       </div>
@@ -196,16 +248,19 @@ const ProfessionalDetail = () => {
 };
 const skillData = [
   {
+    id: 1,
     field: "Automation",
     experience: "3 years",
     competency: "Advanced",
   },
   {
+    id: 2,
     field: "Web Dev",
     experience: "1 years",
     competency: "Intermediate",
   },
   {
+    id: 3,
     field: "Backend Dev",
     experience: "0 years",
     competency: "Begineer",
@@ -213,11 +268,13 @@ const skillData = [
 ];
 const languageData = [
   {
+    id: 1,
     language: "English",
     fluency: "Good",
     competency: "intermediate",
   },
   {
+    id: 2,
     language: "Hindi",
     fluency: "Good",
     competency: "Advanced",
@@ -225,6 +282,7 @@ const languageData = [
 ];
 const prevEmployData = [
   {
+    id: 1,
     company: "Wipro",
     role: "Software Tester",
     from: "22-Jun-2012",
@@ -233,18 +291,21 @@ const prevEmployData = [
 ];
 const educationData = [
   {
+    id: 1,
     course: "B.C.A.",
     passOut: 2011,
     gpa: 95,
     college: "JNTUH",
   },
   {
+    id: 2,
     course: "M.C.A.",
     passOut: 2013,
     gpa: 99,
     college: "HIMT",
   },
   {
+    id: 3,
     course: "B.SC Computers",
     passOut: 2011,
     gpa: 95,

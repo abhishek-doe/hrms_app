@@ -3,13 +3,13 @@ import { useNavigate } from "react-router-dom";
 import { FaTimes } from "react-icons/fa";
 import "./UpdateEmployment.css";
 
-const UpdateEmployment = () => {
+const UpdateEmployment = (props) => {
     const navigate = useNavigate();
     return (
         <main className="updateEmployment">
             <div className="heading-div">
                 <h2 style={{ fontWeight: "100", flex: "1" }}>Update Employment Details</h2>
-                <FaTimes style={{ fontSize: "1.4rem", cursor: "pointer" }} onClick={() => navigate("/professionaldetail")} />
+                <FaTimes style={{ fontSize: "1.4rem", cursor: "pointer" }} onClick={() => props.setModal(false)} />
             </div>
             <form className="detailFields">
                 <div className="form-div">

@@ -3,13 +3,13 @@ import "./UpdateLanguage.css"
 import { FaTimes } from 'react-icons/fa'
 import { useNavigate } from 'react-router-dom'
 
-const UpdateLanguage = () => {
+const UpdateLanguage = (props) => {
     const navigate = useNavigate()
     return (
         <main className="updateLanguage">
             <div className="heading-div">
                 <h2 style={{ fontWeight: "100", flex: "1" }}>Update Language Details</h2>
-                <FaTimes style={{ fontSize: "1.4rem", cursor: "pointer" }} onClick={() => navigate("/professionaldetail")} />
+                <FaTimes style={{ fontSize: "1.4rem", cursor: "pointer" }} onClick={() => props.setModal(false)} />
             </div>
             <form className="detailFields">
                 <div className="form-div">

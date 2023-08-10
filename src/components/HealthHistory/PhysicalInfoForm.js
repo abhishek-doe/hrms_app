@@ -1,15 +1,14 @@
 import React from 'react'
 import "./PhysicalInfoForm.css"
 import { FaTimes } from "react-icons/fa"
-import { useNavigate } from 'react-router-dom'
 
-const PhysicalInfoForm = () => {
-    const navigate = useNavigate()
+const PhysicalInfoForm = (props) => {
+
     return (
         <main className='physicalInfo'>
             <div className="heading-div">
                 <h2 style={{ fontWeight: "100", flex: "1" }}>Add Physical Information</h2>
-                <FaTimes style={{ fontSize: "1.4rem", cursor: "pointer" }} onClick={() => navigate("/healthhistory")} />
+                <FaTimes style={{ fontSize: "1.4rem", cursor: "pointer" }} onClick={() => props.setModal(false)} />
             </div>
             <form className="detailFields">
                 <div className="form-div">

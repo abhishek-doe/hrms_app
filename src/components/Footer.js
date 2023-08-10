@@ -11,7 +11,7 @@ const Footer = () => {
       <div className="container">
         <section style={{ paddingTop: "-1rem" }}>
           <Link to="/">
-            <img src={gtmlogo1} alt="G.T.M." style={{ height: "70px", padding: "10px", borderRadius: "30%"}} />
+            <img src={gtmlogo1} alt="G.T.M." style={{ height: "70px", padding: "10px", borderRadius: "50%" }} />
           </Link>
 
           <p className="description"> Our H.R.M.S. service is best platform for centerialized HR functions that integrates all management functions.</p>

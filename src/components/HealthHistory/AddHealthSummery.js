@@ -1,16 +1,15 @@
 import React from "react";
 import "./AddHealthSummery.css";
 import { FaTimes } from "react-icons/fa";
-import { useNavigate } from "react-router-dom";
 
-const AddHealthSummery = () => {
-    const navigate = useNavigate();
+const AddHealthSummery = (props) => {
+
     return (
         <main className="addHealthSummery">
             <div style={{boxShadow: "rgb(0 0 0/35%) 0px 4px 20px", borderRadius: "10px", padding: "0 10px"}}>
             <div className="heading-div">
                 <h2 style={{ fontWeight: "100", flex: "1", color: "#119acc" }}>Add Health Summery</h2>
-                <FaTimes style={{ fontSize: "1.4rem", cursor: "pointer" }} onClick={() => navigate("/healthhistory")} />
+                <FaTimes style={{ fontSize: "1.4rem", cursor: "pointer" }} onClick={() => props.setModal(false)} />
             </div>
             <form className="detailFields">
                 <div style={{display: "flex", marginBottom: "1rem"}}>

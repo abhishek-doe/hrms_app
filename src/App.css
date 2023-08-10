@@ -14,6 +14,9 @@ body::-webkit-scrollbar-thumb {
     background: #1f7197; 
     border-radius: 3px;
 }
+body.active-modal {
+  overflow-y: hidden;
+}
 button{
     cursor: pointer;
 }
@@ -50,7 +53,7 @@ display: none;
 .dotsmenu-div:hover .dotsmenu{
   position: absolute;
   right: 1rem;
-  top: 4px;
+  top: 0px;
   display: flex;
   flex-direction: column;
   border-radius: 10px;
@@ -63,3 +66,27 @@ display: none;
 .dotsmenu-div:hover .dotsmenu p{
   cursor: pointer;
 }
+
+
+.modal, .overlay {
+  width: 100vw;
+  height: 100vh;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  position: fixed;
+}
+
+.overlay {
+  background: rgba(49,49,49,0.8);
+}
+.modal-content {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  background: white;
+}
+
+

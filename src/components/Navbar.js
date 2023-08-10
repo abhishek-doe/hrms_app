@@ -16,7 +16,6 @@ const Navbar = (props) => {
     let handler = (e) => {
       if (!menuRef.current.contains(e.target)) {
         setIsSideMenu(false)
-        console.log(menuRef.current)
       }
     }
     document.addEventListener("mousedown", handler)
