@@ -6,6 +6,7 @@ import UpdateSkill from "./UpdateSkill"
 import UpdateLanguage from "./UpdateLanguage"
 import UpdateQualification from "./UpdateQualification"
 import UpdateEmployment from "./UpdateEmployment"
+import {skillData, languageData, prevEmployData, educationData} from "../../constants"
 
 
 const ProfessionalDetail = () => {
@@ -246,71 +247,5 @@ const ProfessionalDetail = () => {
     </main>
   );
 };
-const skillData = [
-  {
-    id: 1,
-    field: "Automation",
-    experience: "3 years",
-    competency: "Advanced",
-  },
-  {
-    id: 2,
-    field: "Web Dev",
-    experience: "1 years",
-    competency: "Intermediate",
-  },
-  {
-    id: 3,
-    field: "Backend Dev",
-    experience: "0 years",
-    competency: "Begineer",
-  },
-];
-const languageData = [
-  {
-    id: 1,
-    language: "English",
-    fluency: "Good",
-    competency: "intermediate",
-  },
-  {
-    id: 2,
-    language: "Hindi",
-    fluency: "Good",
-    competency: "Advanced",
-  },
-];
-const prevEmployData = [
-  {
-    id: 1,
-    company: "Wipro",
-    role: "Software Tester",
-    from: "22-Jun-2012",
-    to: "27-Nov-2018",
-  },
-];
-const educationData = [
-  {
-    id: 1,
-    course: "B.C.A.",
-    passOut: 2011,
-    gpa: 95,
-    college: "JNTUH",
-  },
-  {
-    id: 2,
-    course: "M.C.A.",
-    passOut: 2013,
-    gpa: 99,
-    college: "HIMT",
-  },
-  {
-    id: 3,
-    course: "B.SC Computers",
-    passOut: 2011,
-    gpa: 95,
-    college: "JNTUH",
-  },
-];
 
 export default ProfessionalDetail;

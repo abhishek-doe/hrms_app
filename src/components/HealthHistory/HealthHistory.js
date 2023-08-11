@@ -1,9 +1,9 @@
 import React, { useState } from 'react'
 import "./HealthHistory.css"
 import { MdHealthAndSafety } from "react-icons/md"
-import { BsThreeDotsVertical } from "react-icons/bs"
 import PhysicalInfoForm from "./PhysicalInfoForm"
 import AddHealthSummery from './AddHealthSummery'
+import {healthData, summeryData} from "../../constants"
 
 const HealthHistory = () => {
     const [physmodal, setPhysmodal] = useState(false)
@@ -84,54 +84,3 @@ const HealthHistory = () => {
 }
 
 export default HealthHistory
-
-const healthData = [
-    {
-        id: 1,
-        name: "Bloog Group",
-        value: "AB +ve"
-    },
-    {
-        id: 2,
-        name: "Height",
-        value: "5 feet"
-    },
-    {
-        id: 3,
-        name: "Weight",
-        value: "56 Kg"
-    },
-    {
-        id: 4,
-        name: "Blood Pressure",
-        value: "140"
-    },
-    {
-        id: 5,
-        name: "Diabetic",
-        value: "No"
-    }
-]
-const summeryData = [
-    {
-        id: 1,
-        summery: "Health Information",
-        name: "General Checkup",
-        date: "11-Aug-2019",
-        detail: "General Health Checkup"
-    },
-    {
-        id: 2,
-        summery: "Health Information",
-        name: "General Checkup",
-        date: "11-Aug-2019",
-        detail: "General Health Checkup"
-    },
-    {
-        id: 3,
-        summery: "Health Information",
-        name: "General Checkup",
-        date: "11-Aug-2019",
-        detail: "General Health Checkup"
-    },
-]

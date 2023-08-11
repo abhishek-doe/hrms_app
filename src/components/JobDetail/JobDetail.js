@@ -5,6 +5,7 @@ import { TbHierarchy3 } from "react-icons/tb";
 import { AiFillEye } from "react-icons/ai";
 import { FaRegMoneyBillAlt } from "react-icons/fa";
 import { CiBank } from "react-icons/ci";
+import {branchData, positionData, ctcData, bankData} from "../../constants"
 
 const JobDetail = () => {
   const [jobClicked, setJobClicked] = useState(true);
@@ -24,113 +25,6 @@ const JobDetail = () => {
     }
     setBankDrop(i);
   };
-
-  const branchData = [
-    {
-      id: 1,
-      name: "Branch",
-      value: "Ashok Nagar",
-    },
-    {
-      id: 2,
-      name: "Location",
-      value: "Bangalore",
-    },
-    {
-      id: 3,
-      name: "Job Type",
-      value: "Permanent",
-    },
-    {
-      id: 4,
-      name: "Joined Date",
-      value: "01-Apr-2019",
-    },
-  ];
-  const positionData = [
-    {
-      id: 1,
-      role: "Software Tester",
-      depCode: "IT",
-      depName: "IT",
-      depHead: "No",
-      reportTo: "A. Ankush",
-      date: "01-Apr-2019 to Till Date",
-    },
-    {
-      id: 2,
-      role: "Web Developer",
-      depCode: "IT",
-      depName: "IT",
-      depHead: "No",
-      reportTo: "A. Ankush",
-      date: "01-Apr-2019 to Till Date",
-    },
-    {
-      id: 3,
-      role: "Mern Stack",
-      depCode: "IT",
-      depName: "IT",
-      depHead: "No",
-      reportTo: "A. Ankush",
-      date: "01-Apr-2019 to Till Date",
-    },
-  ];
-  const ctcData = [
-    {
-      id: 1,
-      name: "Basic",
-      value: "9000.00",
-    },
-    {
-      id: 2,
-      name: "HRA",
-      value: "5000.00",
-    },
-    {
-      id: 3,
-      name: "Transport Allowance",
-      value: "3000.00",
-    },
-  ];
-  const bankData = [
-    {
-      id: 1,
-      head: "Begumpet",
-      name: "Sushil",
-      number: "6273297364638",
-      branch: "--",
-      mode: "online",
-      type: "Main",
-    },
-    {
-      id: 2,
-      head: "Ariana",
-      name: "Deepak",
-      number: "2344297364638",
-      branch: "--",
-      mode: "online",
-      type: "Main",
-    },
-    {
-      id: 3,
-      head: "Silicon",
-      name: "Anne",
-      number: "1343297364638",
-      branch: "--",
-      mode: "online",
-      type: "Main",
-    },
-    {
-      id: 4,
-      head: "Degam",
-      name: "Suahil",
-      number: "3292297364638",
-      branch: "--",
-      mode: "online",
-      type: "Main",
-    },
-  ];
 
   const branchElement =
     "No Data" &&

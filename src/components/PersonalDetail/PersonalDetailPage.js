@@ -9,6 +9,7 @@ import UpdateEmerC from "./UpdateEmerC"
 import AddAddressD from "./AddAddressD"
 import AddDependent from "./AddDependent"
 import UpdatePersonalDetails from "./UpdatePersonalDetails"
+import {personalData, dependentData} from "../../constants"
 
 const PersonalDetailPage = () => {
   const navigate = useNavigate();
@@ -211,97 +212,3 @@ const PersonalDetailPage = () => {
 };
 
 export default PersonalDetailPage;
-
-const personalData = [
-  {
-    id: 1,
-    name: "FirstName",
-    value: "George",
-    background: "#f9f9f9",
-  },
-  {
-    id: 2,
-    name: "Middle Name",
-    value: "",
-    background: "white",
-  },
-  {
-    id: 3,
-    name: "LastName",
-    value: "Chalan",
-    background: "#f9f9f9",
-  },
-  {
-    id: 4,
-    name: "Gender",
-    value: "Male",
-    background: "white",
-  },
-  {
-    id: 5,
-    name: "D.O.B.",
-    value: "31-May-1988",
-    background: "#f9f9f9",
-  },
-  {
-    id: 6,
-    name: "Mobile Number",
-    value: "9836453627",
-    background: "white",
-  },
-  {
-    id: 7,
-    name: "Marital Status",
-    value: "unmarried",
-    background: "#f9f9f9",
-  },
-  {
-    id: 8,
-    name: "D.O.B.",
-    value: "31-May-1988",
-    background: "white",
-  },
-  {
-    id: 9,
-    name: "D.O.B.",
-    value: "31-May-1988",
-    background: "#f9f9f9",
-  },
-  {
-    id: 10,
-    name: "Gender",
-    value: "Male",
-    background: "white",
-  },
-];
-
-const dependentData = [
-  {
-    id: 1,
-    name: "Charlie",
-    gender: "Male",
-    relation: "Father",
-    dob: "29-Nov-1967",
-  },
-  {
-    id: 2,
-    name: "Stacy",
-    gender: "Female",
-    relation: "Mother",
-    dob: "19-Jan-1965",
-  },
-  {
-    id: 3,
-    name: "Steven",
-    gender: "Male",
-    relation: "Brother",
-    dob: "15-Feb-1991",
-  },
-  {
-    id: 4,
-    name: "Charlie",
-    gender: "Male",
-    relation: "Father",
-    dob: "29-Nov-1967",
-  },
-];
