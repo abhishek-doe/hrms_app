@@ -1,16 +1,14 @@
 import React from 'react'
 import "./UpdateEmerC.css"
 import { FaTimes } from 'react-icons/fa'
-import { useNavigate } from 'react-router-dom'
 
-const UpdateEmerC = () => {
-    const navigate = useNavigate()
+const UpdateEmerC = (props) => {
 
   return (
     <main className="updateEmergencyC">
             <div className="heading-div">
                 <h2 style={{ fontWeight: "100" }}>Update Emergency Contact Details</h2>
-                <FaTimes style={{ fontSize: "1.4rem", cursor: "pointer" }} onClick={() => navigate("/")} />
+                <FaTimes style={{ fontSize: "1.4rem", cursor: "pointer" }} onClick={() => props.setModal(false)} />
             </div>
             <form className="detailFields">
             <div className="form-div">

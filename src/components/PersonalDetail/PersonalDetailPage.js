@@ -1,107 +1,27 @@
-import React from "react";
+import React, { useState } from "react";
 import "./PersonalDetailPage.css";
 import { MdEmail } from "react-icons/md";
 import { GrEdit } from "react-icons/gr";
 import { BsPersonCircle } from "react-icons/bs";
 import { HiOutlineDotsVertical } from "react-icons/hi";
 import { useNavigate } from "react-router-dom";
+import UpdateEmerC from "./UpdateEmerC"
+import AddAddressD from "./AddAddressD"
+import AddDependent from "./AddDependent"
+import UpdatePersonalDetails from "./UpdatePersonalDetails"
 
 const PersonalDetailPage = () => {
   const navigate = useNavigate();
+  const [emermodal, setEmermodal] = useState(false)
+  const [pinfomodal, setPinfomodal] = useState(false)
+  const [addressmodal, setAddressmodal] = useState(false)
+  const [dependentmodal, setDependentmodal] = useState(false)
 
-  const personalData = [
-    {
-      id: 1,
-      name: "FirstName",
-      value: "George",
-      background: "#f9f9f9",
-    },
-    {
-      id: 2,
-      name: "Middle Name",
-      value: "",
-      background: "white",
-    },
-    {
-      id: 3,
-      name: "LastName",
-      value: "Chalan",
-      background: "#f9f9f9",
-    },
-    {
-      id: 4,
-      name: "Gender",
-      value: "Male",
-      background: "white",
-    },
-    {
-      id: 5,
-      name: "D.O.B.",
-      value: "31-May-1988",
-      background: "#f9f9f9",
-    },
-    {
-      id: 6,
-      name: "Mobile Number",
-      value: "9836453627",
-      background: "white",
-    },
-    {
-      id: 7,
-      name: "Marital Status",
-      value: "unmarried",
-      background: "#f9f9f9",
-    },
-    {
-      id: 8,
-      name: "D.O.B.",
-      value: "31-May-1988",
-      background: "white",
-    },
-    {
-      id: 9,
-      name: "D.O.B.",
-      value: "31-May-1988",
-      background: "#f9f9f9",
-    },
-    {
-      id: 10,
-      name: "Gender",
-      value: "Male",
-      background: "white",
-    },
-  ];
-
-  const dependentData = [
-    {
-      id: 1,
-      name: "Charlie",
-      gender: "Male",
-      relation: "Father",
-      dob: "29-Nov-1967",
-    },
-    {
-      id: 2,
-      name: "Stacy",
-      gender: "Female",
-      relation: "Mother",
-      dob: "19-Jan-1965",
-    },
-    {
-      id: 3,
-      name: "Steven",
-      gender: "Male",
-      relation: "Brother",
-      dob: "15-Feb-1991",
-    },
-    {
-      id: 4,
-      name: "Charlie",
-      gender: "Male",
-      relation: "Father",
-      dob: "29-Nov-1967",
-    },
-  ];
+  if(emermodal || pinfomodal || addressmodal || dependentmodal){
+    document.body.classList.add('no-scroll')
+  } else {
+    document.body.classList.remove('no-scroll')
+  }
 
   const personalInfoElement =
     personalData &&
@@ -126,12 +46,12 @@ const PersonalDetailPage = () => {
             </p>
           </div>
           <div className="dotsmenu-div">
-          <HiOutlineDotsVertical />
-          <div className="dotsmenu">
-                    <p>Edit</p>
-                    <hr />
-                    <p>Delete</p>
-                  </div>
+            <HiOutlineDotsVertical />
+            <div className="dotsmenu">
+              <p>Edit</p>
+              <hr />
+              <p>Delete</p>
+            </div>
           </div>
         </div>
       );
@@ -148,7 +68,10 @@ const PersonalDetailPage = () => {
           <div className="profile">
             <img
               src="https://images.unsplash.com/photo-1633332755192-727a05c4013d?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxzZWFyY2h8Mnx8dXNlcnxlbnwwfHwwfHx8MA%3D%3D&w=1000&q=80"
-              style={{ height: "6rem", color: "white", borderRadius: "50%", marginTop: "-2rem" }}
+              alt="employee"
+              style={{
+                height: "6rem", color: "white", borderRadius: "50%", marginTop: "-2rem"
+              }}
             />
             <div style={{ textAlign: "center", color: "#737373" }}>
               <h3>George Calan</h3>
@@ -163,7 +86,7 @@ const PersonalDetailPage = () => {
           <div className="emergency">
             <div style={{ display: "flex", gap: "10px", alignItems: "center", justifyContent: "center", marginTop: "5px", marginBottom: "9px" }}>
               <p style={{ fontSize: "0.9em", color: "#cf796b" }}>Emergency Contact</p>
-              <button className="edit-emer" onClick={() => navigate("/updateemergencycontact")}>
+              <button className="edit-emer" onClick={() => setEmermodal(!emermodal)}>
                 <GrEdit className="edit-btn" />
                 &nbsp;&nbsp;Edit
               </button>
@@ -175,24 +98,44 @@ const PersonalDetailPage = () => {
               Cell: 8291938392{" "}
             </p>
           </div>
+          {
+            emermodal && (
+              <div className="modal">
+                <div className="overlay"></div>
+                <div className="modal-content">
+                  <UpdateEmerC setModal={setEmermodal} />
+                </div>
+              </div>
+            )
+          }
         </section>
 
         <section className="col-2">
           <div className="personal-info">
             <div className="pInfo-tag">
               <h4 style={{ color: "#0e82cf" }}>Personal Information</h4>
-              <button className="edit-info" onClick={handleEditPD}>
+              <button className="edit-info" onClick={() => setPinfomodal(!pinfomodal)}>
                 <GrEdit className="edit-btn" />
                 &nbsp;&nbsp;Edit
               </button>
             </div>
             <div className="info-ele">{personalInfoElement}</div>
+            {
+              pinfomodal && (
+                <div className="modal">
+                  <div className="overlay"></div>
+                  <div className="modal-content">
+                    <UpdatePersonalDetails setModal={setPinfomodal} />
+                  </div>
+                </div>
+              )
+            }
           </div>
 
           <div className="addressD">
             <div className="address-tag">
               <h4 style={{ color: "#0e82cf" }}>Address Details</h4>
-              <button className="edit-info" onClick={() => navigate("/addAddressdetails")}>
+              <button className="edit-info" onClick={() => setAddressmodal(!addressmodal)}>
                 Add More
               </button>
             </div>
@@ -201,12 +144,12 @@ const PersonalDetailPage = () => {
                 <div style={{ display: "flex", gap: "15.1rem", marginBottom: "6px" }}>
                   <h4>Temporary Address</h4>
                   <div className="dotsmenu-div">
-                  <HiOutlineDotsVertical style={{ marginTop: "2px", fontSize: "1.3rem", cursor: "pointer" }} />
-                  <div className="dotsmenu">
-                    <p>Edit</p>
-                    <hr />
-                    <p>Delete</p>
-                  </div>
+                    <HiOutlineDotsVertical style={{ marginTop: "2px", fontSize: "1.3rem", cursor: "pointer" }} />
+                    <div className="dotsmenu">
+                      <p>Edit</p>
+                      <hr />
+                      <p>Delete</p>
+                    </div>
                   </div>
                 </div>
                 <hr />
@@ -229,12 +172,22 @@ const PersonalDetailPage = () => {
               </div>
             </div>
           </div>
+          {
+            addressmodal && (
+              <div className="modal">
+                <div className="overlay"></div>
+                <div className="modal-content">
+                  <AddAddressD setModal={setAddressmodal} />
+                </div>
+              </div>
+            )
+          }
         </section>
 
         <section className="col-3">
           <div className="dependent-tag">
             <h4 style={{ color: "#0e82cf" }}>Dependent Details</h4>
-            <button className="edit-info" onClick={() => navigate("/addDependent")}>
+            <button className="edit-info" onClick={() => setDependentmodal(!dependentmodal)}>
               <GrEdit className="edit-btn" />
               &nbsp;&nbsp;Edit
             </button>
@@ -243,8 +196,112 @@ const PersonalDetailPage = () => {
           <div className="dependent-div">{dependentElement}</div>
         </section>
       </div>
+      {
+        dependentmodal && (
+          <div className="modal">
+            <div className="overlay"></div>
+            <div className="modal-content">
+              <AddDependent setModal={setDependentmodal} />
+            </div>
+          </div>
+        )
+      }
     </main>
   );
 };
 
 export default PersonalDetailPage;
+
+const personalData = [
+  {
+    id: 1,
+    name: "FirstName",
+    value: "George",
+    background: "#f9f9f9",
+  },
+  {
+    id: 2,
+    name: "Middle Name",
+    value: "",
+    background: "white",
+  },
+  {
+    id: 3,
+    name: "LastName",
+    value: "Chalan",
+    background: "#f9f9f9",
+  },
+  {
+    id: 4,
+    name: "Gender",
+    value: "Male",
+    background: "white",
+  },
+  {
+    id: 5,
+    name: "D.O.B.",
+    value: "31-May-1988",
+    background: "#f9f9f9",
+  },
+  {
+    id: 6,
+    name: "Mobile Number",
+    value: "9836453627",
+    background: "white",
+  },
+  {
+    id: 7,
+    name: "Marital Status",
+    value: "unmarried",
+    background: "#f9f9f9",
+  },
+  {
+    id: 8,
+    name: "D.O.B.",
+    value: "31-May-1988",
+    background: "white",
+  },
+  {
+    id: 9,
+    name: "D.O.B.",
+    value: "31-May-1988",
+    background: "#f9f9f9",
+  },
+  {
+    id: 10,
+    name: "Gender",
+    value: "Male",
+    background: "white",
+  },
+];
+
+const dependentData = [
+  {
+    id: 1,
+    name: "Charlie",
+    gender: "Male",
+    relation: "Father",
+    dob: "29-Nov-1967",
+  },
+  {
+    id: 2,
+    name: "Stacy",
+    gender: "Female",
+    relation: "Mother",
+    dob: "19-Jan-1965",
+  },
+  {
+    id: 3,
+    name: "Steven",
+    gender: "Male",
+    relation: "Brother",
+    dob: "15-Feb-1991",
+  },
+  {
+    id: 4,
+    name: "Charlie",
+    gender: "Male",
+    relation: "Father",
+    dob: "29-Nov-1967",
+  },
+];

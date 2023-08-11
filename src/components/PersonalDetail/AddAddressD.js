@@ -1,16 +1,14 @@
 import React from 'react'
 import "./AddAddressD.css"
 import { FaTimes } from 'react-icons/fa'
-import { useNavigate } from 'react-router-dom'
 
-const AddAddressD = () => {
-    const navigate = useNavigate()
+const AddAddressD = (props) => {
 
   return (
     <main className="addAddressD">
             <div className="heading-div">
                 <h2 style={{ fontWeight: "100" }}>Add Address Details</h2>
-                <FaTimes style={{ fontSize: "1.4rem", cursor: "pointer" }} onClick={() => navigate("/")} />
+                <FaTimes style={{ fontSize: "1.4rem", cursor: "pointer" }} onClick={() => props.setModal(false)} />
             </div>
             <form className="detailFields">
                 <div className="form-div">

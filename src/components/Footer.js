@@ -3,7 +3,7 @@ import { AiFillInstagram, AiOutlineTwitter } from "react-icons/ai";
 import { BsFacebook } from "react-icons/bs";
 import { Link } from "react-router-dom";
 import "./Footer.css";
-import gtmlogo1 from "../images/gtmlogo1.png";
+import gtmlogo1 from "../images/hrms_logo.png";
 
 const Footer = () => {
   return (
@@ -11,7 +11,7 @@ const Footer = () => {
       <div className="container">
         <section style={{ paddingTop: "-1rem" }}>
           <Link to="/">
-            <img src={gtmlogo1} alt="G.T.M." style={{ height: "70px", padding: "10px", borderRadius: "50%" }} />
+            <img src={gtmlogo1} alt="G.T.M." style={{ height: "50px", padding: "0px", borderRadius: "10px" }} />
           </Link>
 
           <p className="description"> Our H.R.M.S. service is best platform for centerialized HR functions that integrates all management functions.</p>

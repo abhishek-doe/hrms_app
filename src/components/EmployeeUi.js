@@ -40,6 +40,7 @@ const EmployeeUi = () => {
             <p>
               Salary: <span style={{ color: "#119acc" }}>{data?.salary}</span>
             </p>
+            <button style={{border: "none", borderRadius: "10px", background: "#da3633", margin: "10px 0px", color: "white", padding: "12px"}}>Delete</button>
           </div>
         );
       }) || "No Employee";

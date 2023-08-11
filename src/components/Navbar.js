@@ -1,15 +1,15 @@
-import React, { useState, useRef } from "react";
+import React, {  useRef } from "react";
 import "./Navbar.css";
 import { Link } from "react-router-dom";
 import { AiOutlineMenu } from "react-icons/ai";
 import { FaTimes, FaUserCircle } from "react-icons/fa";
-import gtmlogo1 from "../images/gtmlogo1.png";
-import { useSelector } from "react-redux";
+import gtmlogo1 from "../images/hrms_logo.png";
+// import { useSelector } from "react-redux";
 import { useEffect } from "react";
 
 const Navbar = (props) => {
   const {isSideMenu, setIsSideMenu} = props
-  const isAuth = useSelector((state) => state.login.isAuth);
+  // const isAuth = useSelector((state) => state.login.isAuth);
 
   let menuRef = useRef()
   useEffect(() => {
@@ -35,7 +35,7 @@ const Navbar = (props) => {
             />
           
           <Link to="/">
-            <img src={gtmlogo1} alt="G.T.M." style={{ height: "60px", borderRadius: "30%" }} className="gtm-logo" />
+            <img src={gtmlogo1} alt="G.T.M." style={{ height: "50px", borderRadius: "30%" }} className="gtm-logo" />
           </Link>
         </div>
         <ul className="navbar-ul">
@@ -63,10 +63,10 @@ const Navbar = (props) => {
         <ul className="side-menu-list-div">
         <div className="menu-logo-div">
           <Link to="/" style={{flex: "1"}}>
-            <img src={gtmlogo1} alt="G.T.M." style={{ height: "60px", borderRadius: "30%" }} className="gtm-logo" />
+            <img src={gtmlogo1} alt="G.T.M." style={{ height: "50px", borderRadius: "30%" }} className="gtm-logo" />
           </Link>
           <FaTimes
-            style={{ border: "1px solid black", borderRadius: "5px", fontSize: "25px", marginLeft: "20px", padding: "5px", fontSize: "20px", cursor: "pointer" }}
+            style={{ border: "1px solid black", borderRadius: "5px", fontSize: "25px", padding: "5px", fontSize: "20px", cursor: "pointer" }}
             onClick={() => setIsSideMenu(!isSideMenu)}
           />
         </div>
