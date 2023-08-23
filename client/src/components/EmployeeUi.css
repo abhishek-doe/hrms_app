@@ -30,6 +30,9 @@
   background-color: #3f3f3f;
   color: white;
 }
+.employeeui .employeecard span{
+  flex: 50%;
+}
 .employeeui .employeecard .userIcon {
   font-size: 4rem;
   color: #303030;

@@ -5,15 +5,6 @@ import axios from "axios"
 import { useNavigate } from "react-router-dom";
 
 const EmployeeForm = () => {
-  // const [employeeId, setEmployeeId] = useState(0);
-  // const [employeeEmail, setEmployeeEmail] = useState("");
-  // const [employeeName, setEmployeeName] = useState("");
-  // const [employeePosition, setEmployeePosition] = useState("");
-  // const [employeeDepartment, setEmployeeDepartment] = useState("");
-  // const [employeeSalary, setEmployeeSalary] = useState(0);
-  // const [employeePassword, setEmployeePassword] = useState("");
-  // const [shift, setShift] = useState("");
-  // const [image, setImage] = useState('');
   const [formdata, setFormdata] = useState({
     id: 0,
     name: "",
@@ -21,7 +12,7 @@ const EmployeeForm = () => {
     position: "",
     password: "",
     department: "",
-    shift: "",
+    shift: "morning",
     salary: 0,
   })
 
@@ -36,9 +27,9 @@ const EmployeeForm = () => {
   const handleSubmit = async (e) => {
     e.preventDefault();
 
-
+console.log(formdata)
     try {
-      const response = await axios.post("http://localhost:2030/employee/", { formdata });
+      const response = await axios.post("http://localhost:2030/employee/", { ...formdata });
 
       console.log(response.data); // Do something with the response
       navigate("/employeeui")

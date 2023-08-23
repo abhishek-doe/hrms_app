@@ -46,7 +46,7 @@ const EmployeeUi = () => {
             <button style={{border: "none", borderRadius: "10px", background: "#da3633", margin: "10px 0px", color: "white", padding: "12px"}} onClick={() => deleteEmployee(data?._id)}>Delete</button>
           </div>
         );
-      }) || "No Employee";
+      });
   return (
     <main className="employeeui">
       <div className="input-container">
