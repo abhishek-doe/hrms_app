@@ -75,7 +75,7 @@ const EssLeave = () => {
             <p style={{ color: `${data.color}`, fontWeight: "bold" }}>{data.status}</p>
           </div>
           <div style={{ display: "flex", flexDirection: "column", alignItems: "center" }}>
-            <p style={{ color: "#666666", display: "flex", alignItems: "center", fontSize: ".9rem" }}>
+            <div style={{ color: "#666666", display: "flex", alignItems: "center", fontSize: ".9rem" }}>
               {earnedL}
                 <div className="dotsmenu-div">
                 <BiDotsVertical style={{ fontSize: "1.3rem" }} />
@@ -85,7 +85,7 @@ const EssLeave = () => {
                     <p>Delete</p>
                   </div>
                   </div>
-            </p>
+            </div>
             <p style={{ color: "#666666", fontSize: ".9rem" }}>{data.days} Day(s)</p>
           </div>
         </div>

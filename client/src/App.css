@@ -8,7 +8,6 @@
 
 body::-webkit-scrollbar {
     width: 10px;
-    display: none;
 }
 body::-webkit-scrollbar-thumb {
     background: #1f7197; 

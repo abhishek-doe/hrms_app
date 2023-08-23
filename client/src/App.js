@@ -33,7 +33,6 @@ function App() {
   const [isSideMenu, setIsSideMenu] = useState(false);
 
   useEffect(() => {
-    // When the state 'stopScrolling' changes, add or remove the CSS class to disable/enable scrolling
     setTimeout(() => {
       if (isSideMenu) {
         document.body.classList.add('no-scroll');

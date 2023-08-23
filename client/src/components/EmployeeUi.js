@@ -9,24 +9,27 @@ const EmployeeUi = () => {
   const [search, setSearch] = useState("");
   const [loading, setLoading] = useState(true);
   useEffect(() => {
-    axios.get("https://hrms-shadowwalker1025.vercel.app/api/employees").then((res) => setData(res.data));
+    axios.get("http://localhost:2030/employee/").then((res) => setData(res.data));
     setLoading(false);
-  }, []);
+  }, [data]);
 
+  const deleteEmployee = (id) => {
+    axios.delete(`http://localhost:2030/employee/${id}`).then(res => console.log(res))
+  }
   const employeeuiElement =
     data
       .filter((item) => {
-        return item.fullName.toLowerCase() == "" ? item : item.fullName.toLowerCase().includes(search);
+        return item.name.toLowerCase() == "" ? item : item.name.toLowerCase().includes(search);
       })
       .map((data, i) => {
         return (
           <div className="employeecard" key={i}>
             <FaUserCircle className="userIcon" />
             <p>
-              Name: <span style={{ color: "#119acc" }}>{data?.fullName}</span>
+              Name: <span style={{ color: "#119acc" }}>{data?.id}</span>
             </p>
             <p>
-              Email: <span style={{ color: "#119acc" }}>{data?.emailId}</span>
+              Email: <span style={{ color: "#119acc" }}>{data?.email}</span>
             </p>
             <p>
               Department: <span style={{ color: "#119acc" }}>{data?.department}</span>
@@ -40,7 +43,7 @@ const EmployeeUi = () => {
             <p>
               Salary: <span style={{ color: "#119acc" }}>{data?.salary}</span>
             </p>
-            <button style={{border: "none", borderRadius: "10px", background: "#da3633", margin: "10px 0px", color: "white", padding: "12px"}}>Delete</button>
+            <button style={{border: "none", borderRadius: "10px", background: "#da3633", margin: "10px 0px", color: "white", padding: "12px"}} onClick={() => deleteEmployee(data?._id)}>Delete</button>
           </div>
         );
       }) || "No Employee";
