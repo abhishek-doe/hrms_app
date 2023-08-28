@@ -15,7 +15,7 @@ const HolidayUI = () => {
   const handleDelete = async (id) => {
     try{
      await axios.delete(`http://localhost:2030/holiday/${id}`)
-     .then(rs => console.log(rs.data))
+    //  .then(rs => console.log(rs.data))
     } catch(error){
       console.log(error)
     }

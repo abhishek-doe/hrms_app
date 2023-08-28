@@ -22,6 +22,9 @@ const HolidayForm = () => {
     try {
       await axios.post("http://localhost:2030/holiday", { ...holidayData })
       // .then(res => console.log(res.data))
+      holidayData.name = ""
+      holidayData.date = ""
+      holidayData.description = ""
   } catch (err) {
     console.log(err)
   }
