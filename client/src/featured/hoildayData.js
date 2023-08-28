@@ -11,7 +11,6 @@ export const holidaySlice = createSlice({
   reducers: {
     holiday: (state, action) => {
       state.push(action.payload);
-      // serial += 1;
     }
   },
 });

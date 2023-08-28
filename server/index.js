@@ -9,6 +9,7 @@ connectDB()
 app.use(cors())
 app.use(express.json())
 app.use('/employee', require('./routes/employeeRoutes'))
+app.use('/holiday', require('./routes/holidayRouter'))
 
 app.listen(PORT, (req,res) => {
     console.log(`Server Running on port ${PORT}`)
