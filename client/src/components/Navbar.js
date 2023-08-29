@@ -5,12 +5,14 @@ import { AiOutlineMenu } from "react-icons/ai";
 import { FaTimes, FaUserCircle } from "react-icons/fa";
 import gtmlogo1 from "../images/hrms_logo.png";
 import { useEffect } from "react";
+import { useLocation } from "react-router-dom";
 
 const Navbar = (props) => {
   const { isSideMenu, setIsSideMenu } = props
-  const [activeMenu, setActiveMenu] = useState(0)
 
+  let location = useLocation()
   let menuRef = useRef()
+
   useEffect(() => {
     let handler = (e) => {
       if (!menuRef.current.contains(e.target)) {
@@ -62,26 +64,26 @@ const Navbar = (props) => {
               onClick={() => setIsSideMenu(!isSideMenu)}
             />
           </div>
-          <Link className="sidemenu-link" to="/dashboard" onClick={() => setActiveMenu(0)}>
-            <li>Dashboard</li>
+          <Link className="sidemenu-link" to="/dashboard">
+            <li className={location.pathname === "/dashboard" ? "menuActive" : "menuDisable"}>Dashboard</li>
           </Link>
-          <Link className="sidemenu-link" to="/taskboard" onClick={() => setActiveMenu(1)}>
-            <li>Task Board</li>
+          <Link className="sidemenu-link" to="/taskboard">
+            <li className={location.pathname === "/taskboard" ? "menuActive" : "menuDisable"}>Task Board</li>
           </Link>
-          <Link className="sidemenu-link" to="/professionaldetail" onClick={() => setActiveMenu(2)}>
-            <li>Professional Details</li>
+          <Link className="sidemenu-link" to="/professionaldetail">
+            <li className={location.pathname === "/professionaldetail" ? "menuActive" : "menuDisable"}>Professional Details</li>
           </Link>
-          <Link className="sidemenu-link" to="/jobdetail" onClick={() => setActiveMenu(3)}>
-            <li>Job Details</li>
+          <Link className="sidemenu-link" to="/jobdetail">
+            <li className={location.pathname === "/jobdetail"? "menuActive" : "menuDisable"}>Job Details</li>
           </Link>
-          <Link className="sidemenu-link" to="/documentdetail" onClick={() => setActiveMenu(4)}>
-            <li>Document Details</li>
+          <Link className="sidemenu-link" to="/documentdetail">
+            <li className={location.pathname === "/documentdetail" ? "menuActive" : "menuDisable"}>Document Details</li>
           </Link>
-          <Link className="sidemenu-link" to="/healthhistory" onClick={() => setActiveMenu(5)}>
-            <li>Health History</li>
+          <Link className="sidemenu-link" to="/healthhistory">
+            <li className={location.pathname === "/healthhistory" ? "menuActive" : "menuDisable"}>Health History</li>
           </Link>
-          <Link className="sidemenu-link" to="/essleave" onClick={() => setActiveMenu(6)}>
-            <li>Leave Management</li>
+          <Link className="sidemenu-link" to="/essleave">
+            <li className={location.pathname === "/essleave" ? "menuActive" : "menuDisable"}>Leave Management</li>
           </Link>
         </ul>
       </div>
