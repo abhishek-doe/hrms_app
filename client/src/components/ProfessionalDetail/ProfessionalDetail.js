@@ -6,7 +6,7 @@ import UpdateSkill from "./UpdateSkill"
 import UpdateLanguage from "./UpdateLanguage"
 import UpdateQualification from "./UpdateQualification"
 import UpdateEmployment from "./UpdateEmployment"
-import {skillData, languageData, prevEmployData, educationData} from "../../constants"
+import { skillData, languageData, prevEmployData, educationData } from "../../constants"
 
 
 const ProfessionalDetail = () => {
@@ -28,7 +28,7 @@ const ProfessionalDetail = () => {
   } else {
     document.body.classList.remove('active-modal')
   }
-  
+
   const skillElement =
     skillData &&
     skillData.map((data) => {
@@ -160,16 +160,7 @@ const ProfessionalDetail = () => {
               </div>
             </div>
             <div className="info-ele">{skillElement}</div>
-            {
-              skillmodal && (
-                <div className="modal">
-                  <div className="overlay"></div>
-                  <div className="modal-content">
-                    <UpdateSkill setModal={setSkillmodal} />
-                  </div>
-                </div>
-              )
-            }
+
           </div>
 
 
@@ -184,16 +175,7 @@ const ProfessionalDetail = () => {
               </div>
             </div>
             <div className="info-ele">{languageElement}</div>
-            {
-              lgmodal && (
-                <div className="modal">
-                  <div className="overlay"></div>
-                  <div className="modal-content">
-                    <UpdateLanguage setModal={setLgmodal} />
-                  </div>
-                </div>
-              )
-            }
+
           </div>
         </section>
 
@@ -209,16 +191,7 @@ const ProfessionalDetail = () => {
               </div>
             </div>
             <div className="info-ele">{educationElement}</div>
-            {
-              qualmodal && (
-                <div className="modal">
-                  <div className="overlay"></div>
-                  <div className="modal-content">
-                    <UpdateQualification setModal={setQualmodal} />
-                  </div>
-                </div>
-              )
-            }
+
           </div>
           <div className="prevEmploy-info">
             <div className="pInfo-tag">
@@ -231,19 +204,49 @@ const ProfessionalDetail = () => {
               </div>
             </div>
             <div className="info-ele">{prevEmployElement}</div>
-            {
-              prevmodal && (
-                <div className="modal">
-                  <div className="overlay"></div>
-                  <div className="modal-content">
-                    <UpdateEmployment setModal={setPrevmodal}/>
-                  </div>
-                </div>
-              )
-            }
           </div>
         </section>
       </div>
+      {
+        lgmodal && (
+          <div className="modal">
+            <div className="overlay"></div>
+            <div className="modal-content">
+              <UpdateLanguage setModal={setLgmodal} />
+            </div>
+          </div>
+        )
+      }
+      {
+        prevmodal && (
+          <div className="modal">
+            <div className="overlay"></div>
+            <div className="modal-content">
+              <UpdateEmployment setModal={setPrevmodal} />
+            </div>
+          </div>
+        )
+      }
+      {
+        skillmodal && (
+          <div className="modal">
+            <div className="overlay"></div>
+            <div className="modal-content">
+              <UpdateSkill setModal={setSkillmodal} />
+            </div>
+          </div>
+        )
+      }
+      {
+        qualmodal && (
+          <div className="modal">
+            <div className="overlay"></div>
+            <div className="modal-content">
+              <UpdateQualification setModal={setQualmodal} />
+            </div>
+          </div>
+        )
+      }
     </main>
   );
 };

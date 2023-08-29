@@ -47,7 +47,9 @@
   align-items: center;
 }
 .holidays-heading {
-  margin-left: 1rem;
+  display: flex;
+  justify-content: center;
+  align-items: center;
 }
 .holidays-list .holiday {
   height: 12rem;

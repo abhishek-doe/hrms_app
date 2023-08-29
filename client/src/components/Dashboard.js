@@ -58,7 +58,7 @@ const Dashboard = () => {
         <div className="row-1">
           <div className="profile">
               <BsPersonCircle className="user-image" />
-              <p style={{ wordWrap: "break-word" }}>Welcome<br /><span style={{ color: "#4b81ac", fontWeight: "600"}}>Abhishek Yadav</span></p>
+              <p style={{ wordWrap: "break-word" }}>Welcome<br /><span style={{ color: "#4b81ac", fontWeight: "600"}}>George Calan</span></p>
           </div>
           <div className="lastsignin">
               <p>Your Last Sign in<br /><span style={{ color: "#7BC46C" }}>1 day(s) ago</span></p>

@@ -1,8 +1,8 @@
-import React, { useRef, useState } from "react";
+import React, { useRef } from "react";
 import "./Navbar.css";
 import { Link } from "react-router-dom";
 import { AiOutlineMenu } from "react-icons/ai";
-import { FaTimes, FaUserCircle } from "react-icons/fa";
+import { FaTimes } from "react-icons/fa";
 import gtmlogo1 from "../images/hrms_logo.png";
 import { useEffect } from "react";
 import { useLocation } from "react-router-dom";
@@ -29,7 +29,7 @@ const Navbar = (props) => {
   return (
     <div className="navbar">
       <div className="container">
-        <div style={{ display: "flex", alignItems: "center", gap: "2rem", flex: "1", }}>
+        <div style={{ display: "flex", alignItems: "center", gap: "2rem", flex: "50%" }}>
           <AiOutlineMenu
             style={{ border: "1px solid black", borderRadius: "5px", padding: "5px", fontSize: "20px", marginLeft: "20px", cursor: "pointer" }}
             onClick={() => setIsSideMenu(!isSideMenu)}

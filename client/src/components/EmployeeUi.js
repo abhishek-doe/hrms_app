@@ -7,10 +7,8 @@ import { Link } from "react-router-dom";
 const EmployeeUi = () => {
   const [data, setData] = useState([]);
   const [search, setSearch] = useState("");
-  const [loading, setLoading] = useState(true);
   useEffect(() => {
     axios.get("http://localhost:2030/employee/").then((res) => setData(res.data));
-    setLoading(false);
   }, [data]);
 
   const deleteEmployee = (id) => {
@@ -60,9 +58,9 @@ const EmployeeUi = () => {
         </Link>
       </div>
       <div className="container">
-        {loading ? (
-          <div>
-            <p>please wait</p>
+        {data.length == 0 ? (
+          <div style={{marginTop: "6rem"}}>
+            No Employees
           </div>
         ) : (
           <div className="cardDiv">{employeeuiElement}</div>

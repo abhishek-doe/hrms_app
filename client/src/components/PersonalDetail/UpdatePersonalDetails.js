@@ -4,7 +4,7 @@ import { FaTimes } from "react-icons/fa"
 
 const UpdatePersonalDetails = (props) => {
 
-
+    
     const handleSubmit = (e) => {
         e.preventDefault();
     };
@@ -46,7 +46,7 @@ const UpdatePersonalDetails = (props) => {
                 
                 <div className="form-div">
                     <label htmlFor="password">Nationality</label>
-                    <select id="password" value="">
+                    <select id="password" >
                         <option value="  " selected>Select a country</option>
                         <option value="--">Not Specified</option>
                         <option value="AF">Afghanistan</option>

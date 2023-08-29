@@ -9,7 +9,7 @@ import UpdateEmerC from "./UpdateEmerC"
 import AddAddressD from "./AddAddressD"
 import AddDependent from "./AddDependent"
 import UpdatePersonalDetails from "./UpdatePersonalDetails"
-import {personalData, dependentData} from "../../constants"
+import { personalData, dependentData } from "../../constants"
 
 const PersonalDetailPage = () => {
   const navigate = useNavigate();
@@ -18,7 +18,7 @@ const PersonalDetailPage = () => {
   const [addressmodal, setAddressmodal] = useState(false)
   const [dependentmodal, setDependentmodal] = useState(false)
 
-  if(emermodal || pinfomodal || addressmodal || dependentmodal){
+  if (emermodal || pinfomodal || addressmodal || dependentmodal) {
     document.body.classList.add('no-scroll')
   } else {
     document.body.classList.remove('no-scroll')
@@ -99,16 +99,6 @@ const PersonalDetailPage = () => {
               Cell: 8291938392{" "}
             </p>
           </div>
-          {
-            emermodal && (
-              <div className="modal">
-                <div className="overlay"></div>
-                <div className="modal-content">
-                  <UpdateEmerC setModal={setEmermodal} />
-                </div>
-              </div>
-            )
-          }
         </section>
 
         <section className="col-2">
@@ -121,17 +111,8 @@ const PersonalDetailPage = () => {
               </button>
             </div>
             <div className="info-ele">{personalInfoElement}</div>
-            {
-              pinfomodal && (
-                <div className="modal">
-                  <div className="overlay"></div>
-                  <div className="modal-content">
-                    <UpdatePersonalDetails setModal={setPinfomodal} />
-                  </div>
-                </div>
-              )
-            }
           </div>
+
 
           <div className="addressD">
             <div className="address-tag">
@@ -173,16 +154,7 @@ const PersonalDetailPage = () => {
               </div>
             </div>
           </div>
-          {
-            addressmodal && (
-              <div className="modal">
-                <div className="overlay"></div>
-                <div className="modal-content">
-                  <AddAddressD setModal={setAddressmodal} />
-                </div>
-              </div>
-            )
-          }
+
         </section>
 
         <section className="col-3">
@@ -198,11 +170,41 @@ const PersonalDetailPage = () => {
         </section>
       </div>
       {
+        emermodal && (
+          <div className="modal">
+            <div className="overlay"></div>
+            <div className="modal-content">
+              <UpdateEmerC setModal={setEmermodal} />
+            </div>
+          </div>
+        )
+      }
+      {
+        addressmodal && (
+          <div className="modal">
+            <div className="overlay"></div>
+            <div className="modal-content">
+              <AddAddressD setModal={setAddressmodal} />
+            </div>
+          </div>
+        )
+      }
+      {
         dependentmodal && (
           <div className="modal">
             <div className="overlay"></div>
             <div className="modal-content">
               <AddDependent setModal={setDependentmodal} />
+            </div>
+          </div>
+        )
+      }
+      {
+        pinfomodal && (
+          <div className="modal">
+            <div className="overlay"></div>
+            <div className="modal-content">
+              <UpdatePersonalDetails setModal={setPinfomodal} />
             </div>
           </div>
         )
