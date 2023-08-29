@@ -17,10 +17,10 @@ const LoginPage = () => {
     const handleSubmit = (event) => {
         event.preventDefault();
         
-        axios.post("https://hrms-shadowwalker1025.vercel.app/api/login", {
-            email: employeeId,
-            password: password
-        }).then(res => dispatch(login(res.data)))
+        // axios.post("https://hrms-shadowwalker1025.vercel.app/api/login", {
+        //     email: employeeId,
+        //     password: password
+        // }).then(res => dispatch(login(res.data)))
         console.log("Login submitted!");
         navigate("/")
     };

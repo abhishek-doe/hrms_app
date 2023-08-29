@@ -8,7 +8,7 @@ const PhysicalInfoForm = (props) => {
         <main className='physicalInfo'>
             <div className="heading-div">
                 <h2 style={{ fontWeight: "100", flex: "1" }}>Add Physical Information</h2>
-                <FaTimes style={{ fontSize: "1.4rem", cursor: "pointer" }} onClick={() => props.setModal(false)} />
+                <FaTimes style={{ fontSize: "1.4rem", cursor: "pointer", border: "3px solid white", borderRadius: "5px" }} onClick={() => props.setModal(false)} />
             </div>
             <form className="detailFields">
                 <div className="form-div">

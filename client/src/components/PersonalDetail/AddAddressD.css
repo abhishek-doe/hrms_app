@@ -5,15 +5,15 @@
     flex-direction: column;
 }
 .addAddressD .heading-div{
-    background-color: #f5f5f5;
-    border-bottom: 4px solid #e65a3a !important;
+    background-color: #e65a3a;
     padding: 10px 24px;
     width: 39rem;
-    border: 3px solid #dadada;
+    border: 3px solid white;
     border-radius: 5px;
     display: flex;
     align-items: center;
     gap: 21rem;
+    color: white;
 }
 .addAddressD .detailFields{
     display: grid;

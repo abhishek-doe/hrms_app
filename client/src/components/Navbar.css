@@ -79,6 +79,7 @@
   transition-timing-function: cubic-bezier(0.1, 0.1, .1, 0.1);
 }
 .navbar .side-menu-list-div .sidemenu-link:hover {
+  background-color: #0e82cf;
   color: white;
 }
 .navbar .side-menu-list-div li {

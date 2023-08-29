@@ -13,7 +13,7 @@ const UpdatePersonalDetails = (props) => {
         <main className="updatePD">
             <div className="heading-div">
                 <h2 style={{ fontWeight: "100" }}>Update Personal Details</h2>
-                <FaTimes style={{ fontSize: "1.4rem", cursor: "pointer" }} onClick={() => props.setModal(false)} />
+                <FaTimes style={{ fontSize: "1.4rem", cursor: "pointer", border: "3px solid white", borderRadius: "5px" }} onClick={() => props.setModal(false)} />
             </div>
             <form className="detailFields">
                 <div className="form-div">
@@ -46,7 +46,7 @@ const UpdatePersonalDetails = (props) => {
                 
                 <div className="form-div">
                     <label htmlFor="password">Nationality</label>
-                    <select id="password">
+                    <select id="password" value="">
                         <option value="  " selected>Select a country</option>
                         <option value="--">Not Specified</option>
                         <option value="AF">Afghanistan</option>

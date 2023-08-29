@@ -1,15 +1,14 @@
-import React, { useRef } from "react";
+import React, { useRef, useState } from "react";
 import "./Navbar.css";
 import { Link } from "react-router-dom";
 import { AiOutlineMenu } from "react-icons/ai";
 import { FaTimes, FaUserCircle } from "react-icons/fa";
 import gtmlogo1 from "../images/hrms_logo.png";
-// import { useSelector } from "react-redux";
 import { useEffect } from "react";
 
 const Navbar = (props) => {
   const { isSideMenu, setIsSideMenu } = props
-  // const isAuth = useSelector((state) => state.login.isAuth);
+  const [activeMenu, setActiveMenu] = useState(0)
 
   let menuRef = useRef()
   useEffect(() => {
@@ -39,7 +38,6 @@ const Navbar = (props) => {
           </Link>
         </div>
         <ul className="navbar-ul">
-          {/* {isAuth && ( */}
           <>
             <Link to="/employeeui">
               <li>Employees</li>
@@ -48,17 +46,11 @@ const Navbar = (props) => {
               <li>&nbsp;Holidays</li>
             </Link>
           </>
-          {/* )} */}
-          {/* {isAuth ? ( */}
-          {/* <FaUserCircle /> */}
-          {/* ) : ( */}
           <Link to="login">
             <li>Login</li>
           </Link>
-          {/* )} */}
         </ul>
       </div>
-      {/* {isAuth && ( */}
       <div ref={menuRef} className={isSideMenu ? "side-menu_active" : "side-menu"}>
         <ul className="side-menu-list-div">
           <div className="menu-logo-div">
@@ -70,35 +62,31 @@ const Navbar = (props) => {
               onClick={() => setIsSideMenu(!isSideMenu)}
             />
           </div>
-          <Link className="sidemenu-link" to="/dashboard">
+          <Link className="sidemenu-link" to="/dashboard" onClick={() => setActiveMenu(0)}>
             <li>Dashboard</li>
           </Link>
-          <Link className="sidemenu-link" to="/taskboard">
+          <Link className="sidemenu-link" to="/taskboard" onClick={() => setActiveMenu(1)}>
             <li>Task Board</li>
           </Link>
-          <Link className="sidemenu-link" to="/professionaldetail">
+          <Link className="sidemenu-link" to="/professionaldetail" onClick={() => setActiveMenu(2)}>
             <li>Professional Details</li>
           </Link>
-          <Link className="sidemenu-link" to="/jobdetail">
+          <Link className="sidemenu-link" to="/jobdetail" onClick={() => setActiveMenu(3)}>
             <li>Job Details</li>
           </Link>
-          <Link className="sidemenu-link" to="/documentdetail">
+          <Link className="sidemenu-link" to="/documentdetail" onClick={() => setActiveMenu(4)}>
             <li>Document Details</li>
           </Link>
-          <Link className="sidemenu-link" to="/healthhistory">
+          <Link className="sidemenu-link" to="/healthhistory" onClick={() => setActiveMenu(5)}>
             <li>Health History</li>
           </Link>
-          <Link className="sidemenu-link" to="/essleave">
+          <Link className="sidemenu-link" to="/essleave" onClick={() => setActiveMenu(6)}>
             <li>Leave Management</li>
           </Link>
         </ul>
       </div>
-      {/* )} */}
     </div>
   );
-
-
-
 };
 
 export default Navbar;

@@ -26,7 +26,10 @@ const EmployeeUi = () => {
           <div className="employeecard" key={i}>
             <FaUserCircle className="userIcon" />
             <p>
-              Name: <span style={{ color: "#119acc" }}>{data?.id}</span>
+              Id: <span style={{ color: "#119acc" }}>{data?.id}</span>
+            </p>
+            <p>
+              Name: <span style={{ color: "#119acc" }}>{data?.name}</span>
             </p>
             <p>
               Email: <span style={{ color: "#119acc" }}>{data?.email}</span>
